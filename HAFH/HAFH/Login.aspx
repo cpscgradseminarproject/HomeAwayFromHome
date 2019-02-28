@@ -1,13 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="HAFH.Login" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="HAFH.Login" %>
 
-<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-   <title></title>
-</head>
+
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 <body style="font-family: Arial, Helvetica, sans-serif; font-size: small">
-   <form id="form1" runat="server">
       <div>
          <h4 style="font-size: medium">Log In</h4>
          <hr />
@@ -43,6 +39,4 @@
             </div>
          </asp:PlaceHolder>
       </div>
-   </form>
-</body>
-</html>
+</asp:Content>

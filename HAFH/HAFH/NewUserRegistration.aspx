@@ -1,13 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="NewUserRegistration.aspx.cs" Inherits="HAFH.NewUserRegistration" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="NewUserRegistration.aspx.cs" Inherits="HAFH.NewUserRegistration" %>
 
-<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 <body style="font-family: Arial, Helvetica, sans-serif; font-size: small">
-    <form id="form1" runat="server">
     <div>
         <h4 style="font-size: medium">Register a new user</h4>
         <hr />
@@ -38,6 +33,5 @@
             </div>
         </div>
     </div>
-    </form>
 </body>
-</html>
+</asp:Content>
