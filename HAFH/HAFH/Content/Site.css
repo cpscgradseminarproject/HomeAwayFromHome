@@ -18,6 +18,21 @@ textarea {
     max-width: 280px;
 }
 
+#cal{
+    width: 30%;
+    float:left;
+    display:inline;
+}
+
+#cal_head{
+    width: 30%;
+    float: left;
+    display: inline;
+}
+#prop_title {
+    width: 100%;
+}
+
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {

@@ -4,7 +4,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 <body style="font-family: Arial, Helvetica, sans-serif; font-size: small">
     <div>
-        <h4 style="font-size: medium">Register a new user</h4>
+        <h2 style="font-size: medium">New User Registration</h2>
         <hr />
         <p>
             <asp:Literal runat="server" ID="StatusMessage" />

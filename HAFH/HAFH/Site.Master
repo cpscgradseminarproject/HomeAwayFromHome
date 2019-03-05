@@ -46,7 +46,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
+                    <a class="navbar-brand" runat="server" href="~/">Home Away From Home</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
@@ -55,8 +55,11 @@
                         <li><a runat="server" href="~/Contact">Contact</a></li>
                     </ul>
                 </div>
+                <asp:TextBox runat="server" Width="45%"></asp:TextBox>
+            <asp:Button runat="server" Text="Search" />
             </div>
         </div>
+        <br />
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
