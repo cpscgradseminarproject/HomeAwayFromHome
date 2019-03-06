@@ -11,32 +11,5 @@ namespace HAFH.Scripts {
     
     
     public partial class Poperty {
-        
-        /// <summary>
-        /// PropertyTitle control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label PropertyTitle;
-        
-        /// <summary>
-        /// PropertyDescr control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label PropertyDescr;
-        
-        /// <summary>
-        /// ReservBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ReservBtn;
     }
 }
