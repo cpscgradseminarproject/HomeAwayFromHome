@@ -171,7 +171,6 @@
     <Content Include="Login.aspx" />
     <Content Include="ManageUsers.aspx" />
     <Content Include="NewUserRegistration.aspx" />
-    <Content Include="RentalHistory.aspx" />
     <Content Include="Reservations.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -278,13 +277,6 @@
       <DependentUpon>NewUserRegistration.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RentalHistory.aspx.cs">
-      <DependentUpon>RentalHistory.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="RentalHistory.aspx.designer.cs">
-      <DependentUpon>RentalHistory.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Reservations.aspx.cs">
       <DependentUpon>Reservations.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
