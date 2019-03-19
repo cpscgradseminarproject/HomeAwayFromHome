@@ -21,6 +21,13 @@ namespace HAFH
                     StatusText.Text = string.Format("Hello {0}!!", User.Identity.GetUserName());
                     LoginStatus.Visible = true;
                     LogoutButton.Visible = true;
+
+                    CustomerPanel.Visible = true;
+                    //if (User.IsInRole("PropertyManager"))
+                    //{
+                        PropertManagerPanel.Visible = true;
+                    //}
+                    
                 }
                 else
                 {
