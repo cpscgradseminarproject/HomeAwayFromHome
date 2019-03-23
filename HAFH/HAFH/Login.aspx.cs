@@ -63,30 +63,5 @@ namespace HAFH
             authenticationManager.SignOut();
             Response.Redirect("~/Login.aspx");
         }
-
-        protected void BTNManageProperties_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("ManageProperties.aspx");
-        }
-
-        protected void BTNViewRenterHistory_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("ViewRenterHistory.aspx");
-        }
-
-        protected void BTNDisputesAgainstYou_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("ViewDisputesAgainstYou.aspx");
-        }
-
-        protected void BTNAccBal_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("AccountBalance.aspx");
-        }
-
-        protected void BTNPMSettings_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -145,9 +145,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="AccountBalance.aspx" />
+    <Content Include="UserInfo.aspx" />
     <Content Include="AddPaymentCard.aspx" />
-    <Content Include="AddProperty.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -171,9 +170,10 @@
     <Content Include="Listing.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Login.aspx" />
-    <Content Include="ManageProperties.aspx" />
     <Content Include="ManageUsers.aspx" />
     <Content Include="NewUserRegistration.aspx" />
+    <Content Include="ManagePayments.aspx" />
+    <Content Include="PMApplication.aspx" />
     <Content Include="Reservations.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -182,7 +182,7 @@
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="ViewDisputesAgainstYou.aspx" />
+    <Content Include="ViewDisputes.aspx" />
     <Content Include="ViewProperty.aspx" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
     <Content Include="Scripts\WebForms\Focus.js" />
@@ -206,19 +206,20 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
-    <Content Include="ViewRenterHistory.aspx" />
+    <Content Include="ViewRentalHistory.aspx" />
+    <Content Include="ViewReservation.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountBalance.aspx.cs">
-      <DependentUpon>AccountBalance.aspx</DependentUpon>
+    <Compile Include="UserInfo.aspx.cs">
+      <DependentUpon>UserInfo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AccountBalance.aspx.designer.cs">
-      <DependentUpon>AccountBalance.aspx</DependentUpon>
+    <Compile Include="UserInfo.aspx.designer.cs">
+      <DependentUpon>UserInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="AddPaymentCard.aspx.cs">
       <DependentUpon>AddPaymentCard.aspx</DependentUpon>
@@ -226,13 +227,6 @@
     </Compile>
     <Compile Include="AddPaymentCard.aspx.designer.cs">
       <DependentUpon>AddPaymentCard.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AddProperty.aspx.cs">
-      <DependentUpon>AddProperty.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AddProperty.aspx.designer.cs">
-      <DependentUpon>AddProperty.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
@@ -281,13 +275,6 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ManageProperties.aspx.cs">
-      <DependentUpon>ManageProperties.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ManageProperties.aspx.designer.cs">
-      <DependentUpon>ManageProperties.aspx</DependentUpon>
-    </Compile>
     <Compile Include="ManageUsers.aspx.cs">
       <DependentUpon>ManageUsers.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -302,6 +289,20 @@
     <Compile Include="NewUserRegistration.aspx.designer.cs">
       <DependentUpon>NewUserRegistration.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ManagePayments.aspx.cs">
+      <DependentUpon>ManagePayments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManagePayments.aspx.designer.cs">
+      <DependentUpon>ManagePayments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PMApplication.aspx.cs">
+      <DependentUpon>PMApplication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PMApplication.aspx.designer.cs">
+      <DependentUpon>PMApplication.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reservations.aspx.cs">
       <DependentUpon>Reservations.aspx</DependentUpon>
@@ -310,12 +311,12 @@
     <Compile Include="Reservations.aspx.designer.cs">
       <DependentUpon>Reservations.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ViewDisputesAgainstYou.aspx.cs">
-      <DependentUpon>ViewDisputesAgainstYou.aspx</DependentUpon>
+    <Compile Include="ViewDisputes.aspx.cs">
+      <DependentUpon>ViewDisputes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ViewDisputesAgainstYou.aspx.designer.cs">
-      <DependentUpon>ViewDisputesAgainstYou.aspx</DependentUpon>
+    <Compile Include="ViewDisputes.aspx.designer.cs">
+      <DependentUpon>ViewDisputes.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewProperty.aspx.cs">
       <DependentUpon>ViewProperty.aspx</DependentUpon>
@@ -339,12 +340,19 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
-    <Compile Include="ViewRenterHistory.aspx.cs">
-      <DependentUpon>ViewRenterHistory.aspx</DependentUpon>
+    <Compile Include="ViewRentalHistory.aspx.cs">
+      <DependentUpon>ViewRentalHistory.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ViewRenterHistory.aspx.designer.cs">
-      <DependentUpon>ViewRenterHistory.aspx</DependentUpon>
+    <Compile Include="ViewRentalHistory.aspx.designer.cs">
+      <DependentUpon>ViewRentalHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewReservation.aspx.cs">
+      <DependentUpon>ViewReservation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewReservation.aspx.designer.cs">
+      <DependentUpon>ViewReservation.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
