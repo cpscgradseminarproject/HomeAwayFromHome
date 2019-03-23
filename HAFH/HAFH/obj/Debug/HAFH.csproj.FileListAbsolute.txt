@@ -356,8 +356,8 @@ C:\Users\Zeigrin\Desktop\HAFH Repo\HomeAwayFromHome\HAFH\HAFH\bin\Microsoft.AspN
 C:\Users\Zeigrin\Desktop\HAFH Repo\HomeAwayFromHome\HAFH\HAFH\bin\System.Diagnostics.DiagnosticSource.xml
 C:\Users\Zeigrin\Desktop\HAFH Repo\HomeAwayFromHome\HAFH\HAFH\bin\Microsoft.AspNet.TelemetryCorrelation.xml
 C:\Users\Zeigrin\Desktop\HAFH Repo\HomeAwayFromHome\HAFH\HAFH\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Zeigrin\Desktop\HAFH Repo\HomeAwayFromHome\HAFH\HAFH\obj\Debug\HAFH.csprojResolveAssemblyReference.cache
 C:\Users\Zeigrin\Desktop\HAFH Repo\HomeAwayFromHome\HAFH\HAFH\obj\Debug\HAFH.csproj.CoreCompileInputs.cache
 C:\Users\Zeigrin\Desktop\HAFH Repo\HomeAwayFromHome\HAFH\HAFH\obj\Debug\HAFH.csproj.CopyComplete
 C:\Users\Zeigrin\Desktop\HAFH Repo\HomeAwayFromHome\HAFH\HAFH\obj\Debug\HAFH.dll
 C:\Users\Zeigrin\Desktop\HAFH Repo\HomeAwayFromHome\HAFH\HAFH\obj\Debug\HAFH.pdb
+C:\Users\Zeigrin\Desktop\HAFH Repo\HomeAwayFromHome\HAFH\HAFH\obj\Debug\HAFH.csprojResolveAssemblyReference.cache

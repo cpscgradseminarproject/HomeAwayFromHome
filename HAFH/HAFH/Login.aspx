@@ -2,7 +2,6 @@
 
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <body>
       <div>
          <h2 style="font-size: medium">Log In</h2>
          <hr />
@@ -67,7 +66,6 @@
         <h1>Property Manager Controll Panel</h1>
         <br />
         <br />
-<<<<<<< HEAD
         <asp:Button ID="BTNManageProperties" CssClass="btn btn-default" runat="server" Text="Manage Properties" OnClick="BTNManageProperties_Click" />
         <br />
         <br />
@@ -81,23 +79,6 @@
         <br />
         <br />
         <asp:Button ID="BTNPMSettings" CssClass="btn btn-default" runat="server" Text="Property Manager Settings" OnClick="BTNPMSettings_Click" />
-=======
-        <asp:Button ID="BTNManageProperties" runat="server" Text="Manage Properties" />
-        <br />
-        <br />
-        <asp:Button ID="BTNViewRenterHistory" runat="server" Text="View Renter History" />
-        <br />
-        <br />
-        <asp:Button ID="BTNDisputesAgainstYou" runat="server" Text="View Disputes Against You" />
-        <br />
-        <br />
-        <asp:Button ID="BTNAccBal" runat="server" Text="View Account Ballance" />
-        <br />
-        <br />
-        <asp:Button ID="BTNPMSettings" runat="server" Text="Property Manager Settings" />
->>>>>>> d2ba95781ba9249bf4ca625b4deb95ee6b6120a5
-        <br />
-        <br />
     </asp:Panel>
 
 
