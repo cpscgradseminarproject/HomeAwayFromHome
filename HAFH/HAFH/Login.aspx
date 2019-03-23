@@ -1,7 +1,6 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="HAFH.Login" %>
 
 
-
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
       <div>
          <h2 style="font-size: medium">Log In</h2>
@@ -44,22 +43,22 @@
         <h1>Customer Control Panel</h1>
         <br />
         <br />
-        <asp:Button ID="BTNAccount" runat="server" Text="Edit Account Information" />
+        <asp:Button ID="BTNAccount" CssClass="btn btn-default" runat="server" Text="Edit Account Information" />
         <br />
         <br />
-        <asp:Button ID="BTNPaymentMethods" runat="server" Text="Manage Payment Methods" />
+        <asp:Button ID="BTNPaymentMethods" CssClass="btn btn-default" runat="server" Text="Manage Payment Methods" />
         <br />
         <br />
-        <asp:Button ID="BTNViewReservtions" runat="server" Text="View Reservations" />
+        <asp:Button ID="BTNViewReservtions" CssClass="btn btn-default" runat="server" Text="View Reservations" />
         <br />
         <br />
-        <asp:Button ID="BTNViewRentalHistory" runat="server" Text="View Rental History" />
+        <asp:Button ID="BTNViewRentalHistory" CssClass="btn btn-default" runat="server" Text="View Rental History" />
         <br />
         <br />
-        <asp:Button ID="BTNViewDisputes" runat="server" Text="View Your Disputes" />
+        <asp:Button ID="BTNViewDisputes" CssClass="btn btn-default" runat="server" Text="View Your Disputes" />
         <br />
         <br />
-        <asp:Button ID="BTNPMApp" runat="server" Text="Apply to become a property manager" />
+        <asp:Button ID="BTNPMApp" CssClass="btn btn-default" runat="server" Text="Apply to become a property manager" />
     </asp:Panel>
 
 
@@ -67,19 +66,19 @@
         <h1>Property Manager Controll Panel</h1>
         <br />
         <br />
-        <asp:Button ID="BTNManageProperties" runat="server" Text="Manage Properties" OnClick="BTNManageProperties_Click" />
+        <asp:Button ID="BTNManageProperties" CssClass="btn btn-default" runat="server" Text="Manage Properties" OnClick="BTNManageProperties_Click" />
         <br />
         <br />
-        <asp:Button ID="BTNViewRenterHistory" runat="server" Text="View Renter History" OnClick="BTNViewRenterHistory_Click" />
+        <asp:Button ID="BTNViewRenterHistory" CssClass="btn btn-default" runat="server" Text="View Renter History" OnClick="BTNViewRenterHistory_Click" />
         <br />
         <br />
-        <asp:Button ID="BTNDisputesAgainstYou" runat="server" Text="View Disputes Against You" OnClick="BTNDisputesAgainstYou_Click" />
+        <asp:Button ID="BTNDisputesAgainstYou" CssClass="btn btn-default" runat="server" Text="View Disputes Against You" OnClick="BTNDisputesAgainstYou_Click" />
         <br />
         <br />
-        <asp:Button ID="BTNAccBal" runat="server" Text="View Account Ballance" OnClick="BTNAccBal_Click" />
+        <asp:Button ID="BTNAccBal" CssClass="btn btn-default" runat="server" Text="View Account Ballance" OnClick="BTNAccBal_Click" />
         <br />
         <br />
-        <asp:Button ID="BTNPMSettings" runat="server" Text="Property Manager Settings" OnClick="BTNPMSettings_Click" />
+        <asp:Button ID="BTNPMSettings" CssClass="btn btn-default" runat="server" Text="Property Manager Settings" OnClick="BTNPMSettings_Click" />
         <br />
         <br />
     </asp:Panel>
