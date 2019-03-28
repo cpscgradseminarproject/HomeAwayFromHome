@@ -146,6 +146,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="AccountBalance.aspx" />
+    <Content Include="AddNewProperty.aspx" />
     <Content Include="ManageProperties.aspx" />
     <Content Include="UserInfo.aspx" />
     <Content Include="AddPaymentCard.aspx" />
@@ -224,6 +225,13 @@
     </Compile>
     <Compile Include="AccountBalance.aspx.designer.cs">
       <DependentUpon>AccountBalance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewProperty.aspx.cs">
+      <DependentUpon>AddNewProperty.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddNewProperty.aspx.designer.cs">
+      <DependentUpon>AddNewProperty.aspx</DependentUpon>
     </Compile>
     <Compile Include="ManageProperties.aspx.cs">
       <DependentUpon>ManageProperties.aspx</DependentUpon>

@@ -7,16 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace HAFH
 {
-    public partial class ManageProperties : System.Web.UI.Page
+    public partial class AddNewProperty : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
-
-        protected void BTNAddProperty_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("AddNewProperty.aspx");
         }
     }
 }

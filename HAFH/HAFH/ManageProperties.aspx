@@ -6,5 +6,9 @@
         Manage Properties
     </h1>
 
+    <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+
+    <asp:Button ID="BTNAddProperty" runat="server" Text="Add New Property" OnClick="BTNAddProperty_Click" />
+
 </asp:Content>
 
