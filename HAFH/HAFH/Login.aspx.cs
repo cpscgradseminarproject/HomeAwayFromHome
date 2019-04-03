@@ -49,6 +49,7 @@ namespace HAFH
                         if (CurrentUserRole == 0002)
                         {
                             PropertManagerPanel.Visible = true;
+                            BTNPMApp.Visible = false;
                         }
 
                         if (CurrentUserRole == 0003)
@@ -116,7 +117,12 @@ namespace HAFH
 
         protected void BTNPMSettings_Click(object sender, EventArgs e)
         {
-            Response.Redirect("");
+            Response.Redirect("Login.aspx");
+        }
+
+        protected void BTNPMApp_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("PMApplication.aspx");
         }
     }
 }

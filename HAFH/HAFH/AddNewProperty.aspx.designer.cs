@@ -13,6 +13,15 @@ namespace HAFH {
     public partial class AddNewProperty {
         
         /// <summary>
+        /// PanelProperty control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PanelProperty;
+        
+        /// <summary>
         /// PropNameTxt control.
         /// </summary>
         /// <remarks>
@@ -40,22 +49,40 @@ namespace HAFH {
         protected global::System.Web.UI.WebControls.TextBox AddrTxt;
         
         /// <summary>
-        /// CityTxt control.
+        /// CityDDL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CityTxt;
+        protected global::System.Web.UI.WebControls.DropDownList CityDDL;
         
         /// <summary>
-        /// StTxt control.
+        /// SqlDataSource2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox StTxt;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
+        
+        /// <summary>
+        /// StDDL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList StDDL;
+        
+        /// <summary>
+        /// SqlDataSource1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
         
         /// <summary>
         /// ZipTxt control.

@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="PMApplication.aspx.cs" Inherits="HAFH.PMApplication" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <asp:Panel runat="server" ID="PanelApplication" Visible="false">
 
      <h2 style="font-size: medium">Property Manager Application</h2>
 
@@ -13,10 +14,12 @@
     <asp:TextBox runat="server" ID="AddrTxt"></asp:TextBox>
     <br />
     <asp:Label runat="server" Width="15%">City: </asp:Label>
-    <asp:TextBox runat="server" ID="CityTxt"></asp:TextBox>
+    <asp:DropDownList runat="server" ID="CityDDL" DataSourceID="SqlDataSource2" DataTextField="CityName" DataValueField="CityName"></asp:DropDownList>
+     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [CityName] FROM [City]"></asp:SqlDataSource>
     <br />
     <asp:Label runat="server" Width="15%">State: </asp:Label>
-    <asp:TextBox runat="server" ID="StTxt"></asp:TextBox>
+    <asp:DropDownList runat="server" ID="StDDL" DataSourceID="SqlDataSource1" DataTextField="StateName" DataValueField="StateName"></asp:DropDownList>
+     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [StateName] FROM [States]"></asp:SqlDataSource>
     <br />
     <asp:Label runat="server" Width="15%">Zipcode: </asp:Label>
     <asp:TextBox runat="server" ID="ZipTxt"></asp:TextBox>
@@ -54,5 +57,7 @@
     <asp:Label runat="server" Width="15%">Price per night: </asp:Label>
     <asp:TextBox runat="server" ID="PriceTxt"></asp:TextBox>
     <br />
-    <asp:Button runat="server" ID="SubmitProp" Text="Submit" />
+    <asp:Button runat="server" ID="SubmitProp" Text="Submit" OnClick="SubmitProp_Click" />
+
+    </asp:Panel>
 </asp:Content>

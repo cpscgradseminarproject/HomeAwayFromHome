@@ -58,7 +58,7 @@
         <asp:Button ID="BTNViewDisputes" CssClass="btn btn-default" runat="server" Text="View Your Disputes" />
         <br />
         <br />
-        <asp:Button ID="BTNPMApp" CssClass="btn btn-default" runat="server" Text="Apply to become a property manager" />
+        <asp:Button ID="BTNPMApp" CssClass="btn btn-default" runat="server" Text="Apply to become a property manager" OnClick="BTNPMApp_Click" />
     </asp:Panel>
 
 
