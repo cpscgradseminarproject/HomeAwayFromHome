@@ -147,6 +147,7 @@
     <Content Include="About.aspx" />
     <Content Include="AccountBalance.aspx" />
     <Content Include="AddNewProperty.aspx" />
+    <Content Include="AdminPanel.aspx" />
     <Content Include="ManageProperties.aspx" />
     <Content Include="UserInfo.aspx" />
     <Content Include="AddPaymentCard.aspx" />
@@ -232,6 +233,13 @@
     </Compile>
     <Compile Include="AddNewProperty.aspx.designer.cs">
       <DependentUpon>AddNewProperty.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel.aspx.cs">
+      <DependentUpon>AdminPanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel.aspx.designer.cs">
+      <DependentUpon>AdminPanel.aspx</DependentUpon>
     </Compile>
     <Compile Include="ManageProperties.aspx.cs">
       <DependentUpon>ManageProperties.aspx</DependentUpon>

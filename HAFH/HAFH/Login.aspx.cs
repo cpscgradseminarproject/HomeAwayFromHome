@@ -3,6 +3,8 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -23,12 +25,40 @@ namespace HAFH
                     LogoutButton.Visible = true;
 
                     CustomerPanel.Visible = true;
-                    //if (User.IsInRole("PropertyManager"))
-                    //{
-                        PropertManagerPanel.Visible = true;
-                    //}
-                    
+
+                    if (User.Identity.IsAuthenticated)
+                    {
+                        string CurrentUser = User.Identity.GetUserId();
+                        int CurrentUserRole;
+
+                        string conn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+                        SqlConnection con = new SqlConnection(conn);
+                        con.Open();
+                        string strSelect = "Select RoleID From AspNetUserRoles where UserID = @CurrentUser";
+                        SqlCommand cmd = new SqlCommand(strSelect, con);
+
+                        cmd.Parameters.AddWithValue("@CurrentUser", CurrentUser);
+
+                        SqlDataReader myReader = cmd.ExecuteReader();
+
+                        myReader.Close();
+                        CurrentUserRole = Convert.ToInt16(cmd.ExecuteScalar());
+
+                        con.Close();
+
+                        if (CurrentUserRole == 0002)
+                        {
+                            PropertManagerPanel.Visible = true;
+                        }
+
+                        if (CurrentUserRole == 0003)
+                        {
+                            Response.Redirect("AdminPanel.aspx");
+                        }
+
                 }
+
+            }
                 else
                 {
                     LoginForm.Visible = true;
