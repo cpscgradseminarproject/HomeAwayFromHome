@@ -2,41 +2,26 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <div class="col-md-8">
+
+    <h2>Recent listings</h2>
+    <br />
+    <div class ="col-md-12">
+        <img src="https://place-hold.it/150x150" width="150px" height="150px" class="pull-left" />
+        <h2>A Property Title</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt vulputate orci vel aliquet. Aenean tincidunt dui eu nibh sodales pharetra. Suspendisse ac lorem nec enim rutrum venenatis ac at odio. Sed fermentum nibh a magna dapibus cursus. Sed bibendum neque non euismod sollicitudin. Proin consectetur orci dignissim mi imperdiet blandit. Vivamus sed luctus ligula. In mollis bibendum mi, ac suscipit nunc faucibus et. Phasellus sit amet lacus aliquet nibh elementum congue vel eu tellus. In quis libero egestas, posuere nulla sit amet, facilisis mauris.</p>
     </div>
 
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-            </p>
-        </div>
-    </div>
+
+</div>
+
+<div class="col-md-4">
+    <br />
+    <asp:Button ID="BTNCreatAccount" CssClass="btn btn-default col-xs-12" runat="server" Text="Register New Account" OnClick="BTNCreatAccount_Click" />
+    <br />
+    <br/ />
+    <asp:Button ID="BTNLogin" CssClass="btn btn-default col-xs-12" runat="server" Text="Login" OnClick="BTNLogin_Click" />
+    <br />
+</div>
 
 </asp:Content>

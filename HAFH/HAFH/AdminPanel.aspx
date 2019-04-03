@@ -16,6 +16,9 @@
         <br />
         <br />
         <asp:Button ID="BTNViewPropertySubmissions" runat="server" Text="View New Property Submissions" />
+        <br />
+        <br />
+        <asp:Button ID="BTNLogout" runat="server" Text="Logout" OnClick="BTNLogout_Click" />
 
     </asp:Panel>
 </asp:Content>

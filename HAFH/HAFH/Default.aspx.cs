@@ -13,5 +13,15 @@ namespace HAFH
         {
 
         }
+
+        protected void BTNCreatAccount_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("NewUserRegistration.aspx");
+        }
+
+        protected void BTNLogin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
+        }
     }
 }

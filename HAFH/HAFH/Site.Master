@@ -55,15 +55,33 @@
                         <li><a runat="server" href="~/Contact">Contact</a></li>
                     </ul>
                 </div>
-                <asp:TextBox runat="server" Width="45%"></asp:TextBox>
-            <asp:Button runat="server" Text="Search" />
+
+<div class="row with-margin">
+   <div class="col-lg-12">
+    <div class="input-group input-group-lg">
+      <input type="text" class="form-control input-lg" id="SearchInput" placeholder="Your location (City, State, ZIP)" width="100%">
+      <span class="input-group-btn">
+        <button class="btn btn-default btn-lg" type="submit">Search</button>
+      </span>
+    </div>
+  </div>
+</div>
+
             </div>
         </div>
         <br />
         <div class="container body-content">
+            <br />
+            <br />
+
+            <div></div>
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
+            <br clear="both" />
+            <br />
+            <br />
+
             <footer>
                 <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
             </footer>
