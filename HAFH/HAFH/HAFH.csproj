@@ -149,6 +149,7 @@
     <Content Include="AddNewProperty.aspx" />
     <Content Include="AdminPanel.aspx" />
     <Content Include="ManageProperties.aspx" />
+    <Content Include="Scripts\JavaScript.js" />
     <Content Include="UserInfo.aspx" />
     <Content Include="AddPaymentCard.aspx" />
     <Content Include="Contact.aspx" />
