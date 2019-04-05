@@ -59,5 +59,25 @@ namespace HAFH
             authenticationManager.SignOut();
             Response.Redirect("~/Login.aspx");
         }
+
+        protected void BTNManageCity_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("./AdminDash/ManageCities.aspx");
+        }
+
+        protected void BTNManageState_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("./AdminDash/ManageStates.aspx");
+        }
+
+        protected void BTNManageUsers_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("./AdminDash/ManageUsers.aspx");
+        }
+
+        protected void BTNViewPropertySubmissions_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("./AdminDash/ViewPropertySubmissions.aspx");
+        }
     }
 }
