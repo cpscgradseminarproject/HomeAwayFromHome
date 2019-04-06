@@ -43,16 +43,16 @@
         <h1>Customer Control Panel</h1>
         <br />
         <br />
-        <asp:Button ID="BTNAccount" CssClass="btn btn-default" runat="server" Text="Edit Account Information" />
+        <asp:Button ID="BTNAccount" CssClass="btn btn-default" runat="server" Text="Edit Account Information" OnClick="BTNAccount_Click" />
         <br />
         <br />
-        <asp:Button ID="BTNPaymentMethods" CssClass="btn btn-default" runat="server" Text="Manage Payment Methods" />
+        <asp:Button ID="BTNPaymentMethods" CssClass="btn btn-default" runat="server" Text="Manage Payment Methods" OnClick="BTNPaymentMethods_Click" />
         <br />
         <br />
-        <asp:Button ID="BTNViewReservtions" CssClass="btn btn-default" runat="server" Text="View Reservations" />
+        <asp:Button ID="BTNViewReservtions" CssClass="btn btn-default" runat="server" Text="View Reservations" OnClick="BTNViewReservtions_Click" />
         <br />
         <br />
-        <asp:Button ID="BTNViewRentalHistory" CssClass="btn btn-default" runat="server" Text="View Rental History" />
+        <asp:Button ID="BTNViewRentalHistory" CssClass="btn btn-default" runat="server" Text="View Rental History" OnClick="BTNViewRentalHistory_Click" />
         <br />
         <br />
         <asp:Button ID="BTNViewDisputes" CssClass="btn btn-default" runat="server" Text="View Your Disputes" />

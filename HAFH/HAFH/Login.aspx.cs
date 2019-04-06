@@ -124,5 +124,25 @@ namespace HAFH
         {
             Response.Redirect("PMApplication.aspx");
         }
+
+        protected void BTNAccount_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("UserInfo");
+        }
+
+        protected void BTNPaymentMethods_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BTNViewReservtions_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BTNViewRentalHistory_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

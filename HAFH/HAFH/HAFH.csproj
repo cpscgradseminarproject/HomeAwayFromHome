@@ -179,7 +179,6 @@
     <Content Include="Listing.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Login.aspx" />
-    <Content Include="ManageUsers.aspx" />
     <Content Include="NewUserRegistration.aspx" />
     <Content Include="ManagePayments.aspx" />
     <Content Include="PMApplication.aspx" />
@@ -341,13 +340,6 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ManageUsers.aspx.cs">
-      <DependentUpon>ManageUsers.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ManageUsers.aspx.designer.cs">
-      <DependentUpon>ManageUsers.aspx</DependentUpon>
     </Compile>
     <Compile Include="NewUserRegistration.aspx.cs">
       <DependentUpon>NewUserRegistration.aspx</DependentUpon>

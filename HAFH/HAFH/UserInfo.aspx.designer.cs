@@ -10,34 +10,52 @@
 namespace HAFH {
     
     
-    public partial class AccountEdit {
+    public partial class UserInfo {
         
         /// <summary>
-        /// FstName control.
+        /// TxtUsername control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox FstName;
+        protected global::System.Web.UI.WebControls.TextBox TxtUsername;
         
         /// <summary>
-        /// LstName control.
+        /// TxtFirstName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox LstName;
+        protected global::System.Web.UI.WebControls.TextBox TxtFirstName;
         
         /// <summary>
-        /// Email control.
+        /// TxtLastName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Email;
+        protected global::System.Web.UI.WebControls.TextBox TxtLastName;
+        
+        /// <summary>
+        /// TxtPhoneNumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtPhoneNumber;
+        
+        /// <summary>
+        /// TxtEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtEmail;
         
         /// <summary>
         /// Psswrd control.
