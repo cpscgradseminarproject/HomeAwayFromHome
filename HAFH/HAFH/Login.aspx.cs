@@ -97,52 +97,47 @@ namespace HAFH
 
         protected void BTNManageProperties_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ManageProperties.aspx");
+            Response.Redirect("~/PropertyManagerDash/ManageProperties.aspx");
         }
 
         protected void BTNViewRenterHistory_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ViewRenterHistory.aspx");
-        }
-
-        protected void BTNDisputesAgainstYou_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("ViewDisputesAgainstYou.aspx");
+            Response.Redirect("~/PropertyManagerDash/ViewRenterHistory.aspx");
         }
 
         protected void BTNAccBal_Click(object sender, EventArgs e)
         {
-            Response.Redirect("AccountBalance.aspx");
+            Response.Redirect("~/PropertyManagerDash/AccountBalance.aspx");
         }
 
         protected void BTNPMSettings_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Login.aspx");
+            //Response.Redirect("");
         }
 
         protected void BTNPMApp_Click(object sender, EventArgs e)
         {
-            Response.Redirect("PMApplication.aspx");
+            Response.Redirect("~/CustomerDash/PMApplication.aspx");
         }
 
         protected void BTNAccount_Click(object sender, EventArgs e)
         {
-            Response.Redirect("UserInfo");
+            Response.Redirect("~/CustomerDash/UserInfo");
         }
 
         protected void BTNPaymentMethods_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/CustomerDash/ManagePayments.aspx");
         }
 
         protected void BTNViewReservtions_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/CustomerDash/ViewReservation.aspx");
         }
 
         protected void BTNViewRentalHistory_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/CustomerDash/ViewRentalHistory.aspx");
         }
     }
 }

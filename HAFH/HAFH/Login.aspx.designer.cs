@@ -112,15 +112,6 @@ namespace HAFH {
         protected global::System.Web.UI.WebControls.Button BTNViewRentalHistory;
         
         /// <summary>
-        /// BTNViewDisputes control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BTNViewDisputes;
-        
-        /// <summary>
         /// BTNPMApp control.
         /// </summary>
         /// <remarks>
@@ -155,15 +146,6 @@ namespace HAFH {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BTNViewRenterHistory;
-        
-        /// <summary>
-        /// BTNDisputesAgainstYou control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BTNDisputesAgainstYou;
         
         /// <summary>
         /// BTNAccBal control.

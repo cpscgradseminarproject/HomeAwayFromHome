@@ -145,17 +145,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="AccountBalance.aspx" />
-    <Content Include="AddNewProperty.aspx" />
+    <Content Include="PropertyManagerDash\AccountBalance.aspx" />
+    <Content Include="PropertyManagerDash\AddNewProperty.aspx" />
     <Content Include="AdminDash\ManageCities.aspx" />
     <Content Include="AdminDash\ManageStates.aspx" />
     <Content Include="AdminDash\ManageUsers.aspx" />
     <Content Include="AdminDash\ViewPropertySubmissions.aspx" />
     <Content Include="AdminPanel.aspx" />
-    <Content Include="ManageProperties.aspx" />
+    <Content Include="PropertyManagerDash\ManageProperties.aspx" />
     <Content Include="Scripts\JavaScript.js" />
-    <Content Include="UserInfo.aspx" />
-    <Content Include="AddPaymentCard.aspx" />
+    <Content Include="CustomerDash\UserInfo.aspx" />
+    <Content Include="CustomerDash\AddPaymentCard.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -163,8 +163,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
-    <Content Include="EditPaymentCard.aspx" />
-    <Content Include="EditProperty.aspx" />
+    <Content Include="CustomerDash\EditPaymentCard.aspx" />
+    <Content Include="PropertyManagerDash\EditProperty.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -180,8 +180,8 @@
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Login.aspx" />
     <Content Include="NewUserRegistration.aspx" />
-    <Content Include="ManagePayments.aspx" />
-    <Content Include="PMApplication.aspx" />
+    <Content Include="CustomerDash\ManagePayments.aspx" />
+    <Content Include="CustomerDash\PMApplication.aspx" />
     <Content Include="Reservations.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -190,8 +190,8 @@
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="ViewDisputes.aspx" />
-    <Content Include="ViewDisputesAgainstYou.aspx" />
+    <Content Include="PossiblyCutPages\ViewDisputes.aspx" />
+    <Content Include="PossiblyCutPages\ViewDisputesAgainstYou.aspx" />
     <Content Include="ViewProperty.aspx" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
     <Content Include="Scripts\WebForms\Focus.js" />
@@ -215,27 +215,27 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
-    <Content Include="ViewRentalHistory.aspx" />
-    <Content Include="ViewRenterHistory.aspx" />
-    <Content Include="ViewReservation.aspx" />
+    <Content Include="CustomerDash\ViewRentalHistory.aspx" />
+    <Content Include="PropertyManagerDash\ViewRenterHistory.aspx" />
+    <Content Include="CustomerDash\ViewReservation.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountBalance.aspx.cs">
+    <Compile Include="PropertyManagerDash\AccountBalance.aspx.cs">
       <DependentUpon>AccountBalance.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AccountBalance.aspx.designer.cs">
+    <Compile Include="PropertyManagerDash\AccountBalance.aspx.designer.cs">
       <DependentUpon>AccountBalance.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AddNewProperty.aspx.cs">
+    <Compile Include="PropertyManagerDash\AddNewProperty.aspx.cs">
       <DependentUpon>AddNewProperty.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AddNewProperty.aspx.designer.cs">
+    <Compile Include="PropertyManagerDash\AddNewProperty.aspx.designer.cs">
       <DependentUpon>AddNewProperty.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminDash\ManageCities.aspx.cs">
@@ -273,25 +273,25 @@
     <Compile Include="AdminPanel.aspx.designer.cs">
       <DependentUpon>AdminPanel.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ManageProperties.aspx.cs">
+    <Compile Include="PropertyManagerDash\ManageProperties.aspx.cs">
       <DependentUpon>ManageProperties.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ManageProperties.aspx.designer.cs">
+    <Compile Include="PropertyManagerDash\ManageProperties.aspx.designer.cs">
       <DependentUpon>ManageProperties.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UserInfo.aspx.cs">
+    <Compile Include="CustomerDash\UserInfo.aspx.cs">
       <DependentUpon>UserInfo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserInfo.aspx.designer.cs">
+    <Compile Include="CustomerDash\UserInfo.aspx.designer.cs">
       <DependentUpon>UserInfo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AddPaymentCard.aspx.cs">
+    <Compile Include="CustomerDash\AddPaymentCard.aspx.cs">
       <DependentUpon>AddPaymentCard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AddPaymentCard.aspx.designer.cs">
+    <Compile Include="CustomerDash\AddPaymentCard.aspx.designer.cs">
       <DependentUpon>AddPaymentCard.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -317,18 +317,18 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="EditPaymentCard.aspx.cs">
+    <Compile Include="CustomerDash\EditPaymentCard.aspx.cs">
       <DependentUpon>EditPaymentCard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="EditPaymentCard.aspx.designer.cs">
+    <Compile Include="CustomerDash\EditPaymentCard.aspx.designer.cs">
       <DependentUpon>EditPaymentCard.aspx</DependentUpon>
     </Compile>
-    <Compile Include="EditProperty.aspx.cs">
+    <Compile Include="PropertyManagerDash\EditProperty.aspx.cs">
       <DependentUpon>EditProperty.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="EditProperty.aspx.designer.cs">
+    <Compile Include="PropertyManagerDash\EditProperty.aspx.designer.cs">
       <DependentUpon>EditProperty.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
@@ -348,18 +348,18 @@
     <Compile Include="NewUserRegistration.aspx.designer.cs">
       <DependentUpon>NewUserRegistration.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ManagePayments.aspx.cs">
+    <Compile Include="CustomerDash\ManagePayments.aspx.cs">
       <DependentUpon>ManagePayments.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ManagePayments.aspx.designer.cs">
+    <Compile Include="CustomerDash\ManagePayments.aspx.designer.cs">
       <DependentUpon>ManagePayments.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PMApplication.aspx.cs">
+    <Compile Include="CustomerDash\PMApplication.aspx.cs">
       <DependentUpon>PMApplication.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PMApplication.aspx.designer.cs">
+    <Compile Include="CustomerDash\PMApplication.aspx.designer.cs">
       <DependentUpon>PMApplication.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -370,18 +370,18 @@
     <Compile Include="Reservations.aspx.designer.cs">
       <DependentUpon>Reservations.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ViewDisputes.aspx.cs">
+    <Compile Include="PossiblyCutPages\ViewDisputes.aspx.cs">
       <DependentUpon>ViewDisputes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ViewDisputes.aspx.designer.cs">
+    <Compile Include="PossiblyCutPages\ViewDisputes.aspx.designer.cs">
       <DependentUpon>ViewDisputes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ViewDisputesAgainstYou.aspx.cs">
+    <Compile Include="PossiblyCutPages\ViewDisputesAgainstYou.aspx.cs">
       <DependentUpon>ViewDisputesAgainstYou.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ViewDisputesAgainstYou.aspx.designer.cs">
+    <Compile Include="PossiblyCutPages\ViewDisputesAgainstYou.aspx.designer.cs">
       <DependentUpon>ViewDisputesAgainstYou.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewProperty.aspx.cs">
@@ -406,25 +406,25 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
-    <Compile Include="ViewRentalHistory.aspx.cs">
+    <Compile Include="CustomerDash\ViewRentalHistory.aspx.cs">
       <DependentUpon>ViewRentalHistory.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ViewRentalHistory.aspx.designer.cs">
+    <Compile Include="CustomerDash\ViewRentalHistory.aspx.designer.cs">
       <DependentUpon>ViewRentalHistory.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ViewRenterHistory.aspx.cs">
+    <Compile Include="PropertyManagerDash\ViewRenterHistory.aspx.cs">
       <DependentUpon>ViewRenterHistory.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ViewRenterHistory.aspx.designer.cs">
+    <Compile Include="PropertyManagerDash\ViewRenterHistory.aspx.designer.cs">
       <DependentUpon>ViewRenterHistory.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ViewReservation.aspx.cs">
+    <Compile Include="CustomerDash\ViewReservation.aspx.cs">
       <DependentUpon>ViewReservation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ViewReservation.aspx.designer.cs">
+    <Compile Include="CustomerDash\ViewReservation.aspx.designer.cs">
       <DependentUpon>ViewReservation.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">

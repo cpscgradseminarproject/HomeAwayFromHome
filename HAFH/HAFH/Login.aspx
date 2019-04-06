@@ -55,9 +55,6 @@
         <asp:Button ID="BTNViewRentalHistory" CssClass="btn btn-default" runat="server" Text="View Rental History" OnClick="BTNViewRentalHistory_Click" />
         <br />
         <br />
-        <asp:Button ID="BTNViewDisputes" CssClass="btn btn-default" runat="server" Text="View Your Disputes" />
-        <br />
-        <br />
         <asp:Button ID="BTNPMApp" CssClass="btn btn-default" runat="server" Text="Apply to become a property manager" OnClick="BTNPMApp_Click" />
     </asp:Panel>
 
@@ -70,9 +67,6 @@
         <br />
         <br />
         <asp:Button ID="BTNViewRenterHistory" CssClass="btn btn-default" runat="server" Text="View Renter History" OnClick="BTNViewRenterHistory_Click" />
-        <br />
-        <br />
-        <asp:Button ID="BTNDisputesAgainstYou" CssClass="btn btn-default" runat="server" Text="View Disputes Against You" OnClick="BTNDisputesAgainstYou_Click" />
         <br />
         <br />
         <asp:Button ID="BTNAccBal" CssClass="btn btn-default" runat="server" Text="View Account Ballance" OnClick="BTNAccBal_Click" />
