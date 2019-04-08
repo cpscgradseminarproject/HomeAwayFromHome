@@ -16,4 +16,10 @@
             <asp:Parameter Name="CityName" Type="String" />
         </InsertParameters>
     </asp:SqlDataSource>
+
+
+    <asp:Label ID="LBLAddCity" runat="server" Text="Add a New State:"></asp:Label>
+    <asp:TextBox ID="TXTAddCity" runat="server"></asp:TextBox>
+    <br />
+    <asp:Button ID="BTNAddCity" runat="server" Text="Add" />
 </asp:Content>

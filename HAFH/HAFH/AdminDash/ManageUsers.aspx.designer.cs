@@ -13,6 +13,15 @@ namespace HAFH.AdminDash {
     public partial class ManageUsers {
         
         /// <summary>
+        /// GVManageUsers control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GVManageUsers;
+        
+        /// <summary>
         /// HAFHDB control.
         /// </summary>
         /// <remarks>
