@@ -18,6 +18,11 @@ namespace HAFH
             string CurrentUser = User.Identity.GetUserId();
         }
 
+        protected void Page_PreRender(object sender, EventArgs e)
+        {
+            LoadUserInfo();
+        }
+
         protected void SbmtInfo_Click(object sender, EventArgs e)
         {
 
@@ -25,59 +30,32 @@ namespace HAFH
 
         protected void LoadUserInfo()
         {
-            /*
-            string UserName;
-            string FirstName;
-            string LastName;
-            string PhoneNumber;
-            string Email;
-
-            using (var conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ToString()))
-            using (var command = new SqlCommand("SelectUserSelfEdit", conn) { CommandType = CommandType.StoredProcedure })
-            {
-                command.Parameters.Add("@Username", SqlDbType.NVarChar);
-                command.Parameters.Add("@FirstName", SqlDbType.NVarChar);
-                command.Parameters.Add("@LastName", SqlDbType.NVarChar);
-                command.Parameters.Add("@PhoneNumber", SqlDbType.NVarChar);
-                command.Parameters.Add("@Email", SqlDbType.NVarChar);
-
-                conn.Open();
-                command.ExecuteNonQuery();
-                */
-
             string CurrentUser = User.Identity.GetUserId();
             //string StateValue;
 
-            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ToString());
-            conn.Open();
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ToString());
+            con.Open();
             SqlDataReader myReader = null;
-            //modify to use stored procedure
-            using (var command = new SqlCommand("SelectUserSelfEdit", conn) { CommandType = CommandType.StoredProcedure })
+            //out SQL code will execute as the stored procedure SelectUsersSelfEdit
+            SqlCommand SelectUserInfo = new SqlCommand("SelectUserSelfEdit", con) { CommandType = CommandType.StoredProcedure };
+
+            //sets up the same variables as the query
+            SelectUserInfo.Parameters.Add("@CurrentUser", SqlDbType.NVarChar).Value = CurrentUser;
+
+            SelectUserInfo.Connection = con;
+
+            myReader = SelectUserInfo.ExecuteReader();
+
+            //While its reading the Query it will set the values to our form fields.
+            while (myReader.Read())
             {
-                //Any Parameters will be here.
-                command.Parameters.Add("@CurrentUser", SqlDbType.NVarChar).Value = CurrentUser;
-                command.Parameters.Add("@UserName", SqlDbType.NVarChar);
-                command.Parameters.Add("@LastName", SqlDbType.NVarChar);
-                command.Parameters.Add("@PhoneNumber", SqlDbType.NVarChar);
-                command.Parameters.Add("@Email", SqlDbType.NVarChar);
-
-                command.Connection = conn;
-
-                myReader = command.ExecuteReader();
-
-                while (myReader.Read())
-                {
-                    //this is where the data is going
-                    TxtUsername.Text = myReader["@UserName"].ToString().Trim();
-                    TxtFirstName.Text = myReader["@FirstName"].ToString().Trim();
-                    TxtLastName.Text = myReader["@LastName"].ToString().Trim();
-                    TxtPhoneNumber.Text = myReader["@PhoneNumber"].ToString().Trim();
-                    TxtEmail.Text = myReader["@Email"].ToString().Trim();
-
-                }
-                conn.Close();
+                TxtUsername.Text = myReader["UserName"].ToString().Trim();
+                TxtFirstName.Text = myReader["FirstName"].ToString().Trim();
+                TxtLastName.Text = myReader["LastName"].ToString().Trim();
+                TxtPhoneNumber.Text = myReader["PhoneNumber"].ToString().Trim();
+                TxtEmail.Text = myReader["Email"].ToString().Trim();
             }
-                
+            con.Close();       
         }
 
         protected void PageValidation()

@@ -21,5 +21,5 @@
     <asp:Label ID="LBLAddState" runat="server" Text="Add a New State:"></asp:Label>
     <asp:TextBox ID="TXTAddState" runat="server"></asp:TextBox>
     <br />
-    <asp:Button ID="BTNAddState" runat="server" Text="Add" />
+    <asp:Button ID="BTNAddState" runat="server" Text="Add" OnClick="BTNAddState_Click" />
 </asp:Content>

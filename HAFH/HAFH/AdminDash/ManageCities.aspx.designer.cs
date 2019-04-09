@@ -49,6 +49,33 @@ namespace HAFH.AdminDash {
         protected global::System.Web.UI.WebControls.TextBox TXTAddCity;
         
         /// <summary>
+        /// LBLStates control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LBLStates;
+        
+        /// <summary>
+        /// DDLStates control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DDLStates;
+        
+        /// <summary>
+        /// StatesDB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource StatesDB;
+        
+        /// <summary>
         /// BTNAddCity control.
         /// </summary>
         /// <remarks>

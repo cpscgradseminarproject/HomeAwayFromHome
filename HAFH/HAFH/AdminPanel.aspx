@@ -6,10 +6,10 @@
     
     <asp:Panel runat="server" ID="PNLAdmin" Visible="False">
 
-        <asp:Button ID="BTNManageCity" runat="server" Text="Manage Permitted States" OnClick="BTNManageCity_Click" />
+        <asp:Button ID="BTNManageCity" runat="server" Text="Manage Permitted States" OnClick="BTNManageState_Click" />
         <br />
         <br />
-        <asp:Button ID="BTNManageState" runat="server" Text="Manage Permitted Cities" OnClick="BTNManageState_Click" />
+        <asp:Button ID="BTNManageState" runat="server" Text="Manage Permitted Cities" OnClick="BTNManageCity_Click" />
         <br />
         <br />
         <asp:Button ID="BTNManageUsers" runat="server" Text="Manage Users" OnClick="BTNManageUsers_Click" />

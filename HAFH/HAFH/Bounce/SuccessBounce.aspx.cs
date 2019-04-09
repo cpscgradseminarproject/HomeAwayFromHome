@@ -11,7 +11,18 @@ namespace HAFH.Bounce
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //Response.AddHeader("REFRESH", "3;URL=PaymentHistory.aspx");
+            if (!IsPostBack)
+            //check if the webpage is loaded for the first time. 
+            {
+                ViewState["PreviousPage"] =
+                Request.UrlReferrer;//Saves the Previous page url in ViewState 
+            }
+            if (ViewState["PreviousPage"] != null) //Check if the ViewState  
+                                                   //contains Previous page URL        {
+                Response.Redirect(ViewState["PreviousPage"].ToString());
+            //Redirect to
+            //Previous page by retrieving the PreviousPage Url from ViewState. 
         }
     }
 }
