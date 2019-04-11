@@ -25,7 +25,19 @@ namespace HAFH
 
         protected void SbmtInfo_Click(object sender, EventArgs e)
         {
+            if (TxtPsswrd.Text == TxtPsswrdcfrm.Text)
+            {
+                Update();
+            }
+            else
+            {
+                OpenWindow();
+            }
+        }
 
+        private void OpenWindow()
+        {
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('Please ensure your passwords fields match.');</script>");
         }
 
         protected void LoadUserInfo()
@@ -62,6 +74,27 @@ namespace HAFH
         {
 
         }
+        protected void Update()
+        {
+            string CurrentUser = User.Identity.GetUserId();
+
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ToString());
+            SqlCommand update_item = new SqlCommand("UserUpdate", con);
+            update_item.CommandType = CommandType.StoredProcedure;
+            update_item.Parameters.Add("@Id", SqlDbType.NVarChar).Value = CurrentUser;
+            update_item.Parameters.Add("@Email", SqlDbType.NVarChar).Value = TxtEmail.Text;
+            update_item.Parameters.Add("@Password", SqlDbType.NVarChar).Value = TxtPsswrd.Text;
+            update_item.Parameters.Add("@PhoneNumber", SqlDbType.NVarChar).Value = TxtPhoneNumber.Text;
+            update_item.Parameters.Add("@Username", SqlDbType.NVarChar).Value = TxtUsername.Text;
+            update_item.Parameters.Add("@FirstName", SqlDbType.NVarChar).Value = TxtFirstName.Text;
+            update_item.Parameters.Add("@LastName", SqlDbType.NVarChar).Value = TxtLastName.Text;
+
+            con.Open();
+            update_item.ExecuteNonQuery();
+            con.Close();
+        }
+
+       
 
     }
 }

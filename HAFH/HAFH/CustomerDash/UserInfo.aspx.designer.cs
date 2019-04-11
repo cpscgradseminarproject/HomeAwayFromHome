@@ -58,22 +58,22 @@ namespace HAFH {
         protected global::System.Web.UI.WebControls.TextBox TxtEmail;
         
         /// <summary>
-        /// Psswrd control.
+        /// TxtPsswrd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Psswrd;
+        protected global::System.Web.UI.WebControls.TextBox TxtPsswrd;
         
         /// <summary>
-        /// Psswrdcfrm control.
+        /// TxtPsswrdcfrm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Psswrdcfrm;
+        protected global::System.Web.UI.WebControls.TextBox TxtPsswrdcfrm;
         
         /// <summary>
         /// SbmtInfo control.

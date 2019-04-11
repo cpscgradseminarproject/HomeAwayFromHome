@@ -18,10 +18,10 @@
         <asp:TextBox ID="TxtEmail" runat="server"></asp:TextBox>
         <br />
         <asp:Label runat="server" Width="6%">Password: </asp:Label>
-        <asp:TextBox runat="server" ID="Psswrd"></asp:TextBox>
+        <asp:TextBox runat="server" ID="TxtPsswrd"></asp:TextBox>
         <br />
         <asp:Label runat="server" Width="6%">Confirm Password: </asp:Label>
-        <asp:TextBox ID="Psswrdcfrm" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TxtPsswrdcfrm" runat="server"></asp:TextBox>
         <br />
         <asp:Button ID="SbmtInfo" Text="Submit" runat="server" OnClick="SbmtInfo_Click" style="height: 26px" />
 
