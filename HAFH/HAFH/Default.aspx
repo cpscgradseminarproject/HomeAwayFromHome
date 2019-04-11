@@ -8,8 +8,14 @@
     <br />
     <div class ="col-md-12">
         <img src="https://place-hold.it/150x150" width="150px" height="150px" class="pull-left" />
-        <h2>A Property Title</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt vulputate orci vel aliquet. Aenean tincidunt dui eu nibh sodales pharetra. Suspendisse ac lorem nec enim rutrum venenatis ac at odio. Sed fermentum nibh a magna dapibus cursus. Sed bibendum neque non euismod sollicitudin. Proin consectetur orci dignissim mi imperdiet blandit. Vivamus sed luctus ligula. In mollis bibendum mi, ac suscipit nunc faucibus et. Phasellus sit amet lacus aliquet nibh elementum congue vel eu tellus. In quis libero egestas, posuere nulla sit amet, facilisis mauris.</p>
+        <h1><asp:Label ID="LBLPropertyName" runat="server"></asp:Label></h1>
+        <h2><asp:Label ID="LBLAddress" runat="server" Text="Label"></asp:Label></h2>
+        <p><asp:Label ID="LBLDesc" runat="server" Text="Label"></asp:Label></p>
+        <asp:Label ID="LBLBedroom" runat="server" Text="Number Of Bedroom:"></asp:Label>
+        <asp:Label ID="LBLBedroomCount" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="LBLBathroom" runat="server" Text="Number Of Bathrooms:"></asp:Label>
+        <asp:Label ID="LBLBathroomCount" runat="server" Text="Label"></asp:Label>
+
     </div>
 
 
