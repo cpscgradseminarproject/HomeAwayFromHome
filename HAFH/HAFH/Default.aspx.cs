@@ -14,6 +14,8 @@ namespace HAFH
 {
     public partial class _Default : Page
     {
+        Label[,] PropertySynopsis = new Label[5, 5];
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -26,8 +28,7 @@ namespace HAFH
 
         protected void LoadProperties()
         {
-            string CurrentUser = User.Identity.GetUserId();
-            //string StateValue;
+            
 
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ToString());
             con.Open();
@@ -41,22 +42,49 @@ namespace HAFH
 
             //While its reading the Query it will set the values to our form fields.
 
-            Label[,] PropertySynopsis = new Label[5, 5];
-
             while (myReader.Read())
             {
-                for (int i =0; i <= 4; i++)
+                for (int i = 0; i <= 0; i++)
                 {
-                    for (int j = 0; j <= 4; j++)
-                    {
-                        Label l = new Label();
-                        PropertySynopsis[i, j] = l;
-                        l.Text = myReader["PropertyName"].ToString().Trim();
-                        PropertySynopsisPage.Controls.Add(l);
-                        PropertySynopsisPage.Controls.Add(new LiteralControl("<br />"));
-                        
 
-                    }
+                    PropertySynopsisPage.Controls.Add(new LiteralControl("<div class='PropertySynopsis'>"));
+
+                    Label PropertyName = new Label();
+                    PropertySynopsis[i, 0] = PropertyName;
+                    PropertyName.Text = myReader["PropertyName"].ToString().Trim();
+                    PropertySynopsisPage.Controls.Add(PropertyName);
+                    PropertySynopsisPage.Controls.Add(new LiteralControl("<br />"));
+                    
+
+                    Label PropertyAddress = new Label();
+                    PropertySynopsis[i, 1] = PropertyAddress;
+                    PropertyAddress.Text = myReader["PropertyAddress"].ToString().Trim();
+                    PropertySynopsisPage.Controls.Add(PropertyAddress);
+                    PropertySynopsisPage.Controls.Add(new LiteralControl("<br />"));
+
+
+                    Label PropertyDesc = new Label();
+                    PropertySynopsis[i, 2] = PropertyDesc;
+                    PropertyDesc.Text = myReader["PropertyDesc"].ToString().Trim();
+                    PropertySynopsisPage.Controls.Add(PropertyDesc);
+                    PropertySynopsisPage.Controls.Add(new LiteralControl("<br />"));
+
+
+                    Label PropertyBedroomCount = new Label();
+                    PropertySynopsis[i, 3] = PropertyBedroomCount;
+                    PropertyBedroomCount.Text = myReader["NumberOfBedrooms"].ToString().Trim();
+                    PropertySynopsisPage.Controls.Add(PropertyBedroomCount);
+                    PropertySynopsisPage.Controls.Add(new LiteralControl("<br />"));
+
+
+                    Label PropertyBathroomCount = new Label();
+                    PropertySynopsis[i, 4] = PropertyBathroomCount;
+                    PropertyBathroomCount.Text = myReader["NumberOfBathrooms"].ToString().Trim();
+                    PropertySynopsisPage.Controls.Add(PropertyBathroomCount);
+                    PropertySynopsisPage.Controls.Add(new LiteralControl("<br />"));
+
+                    PropertySynopsisPage.Controls.Add(new LiteralControl("</div>"));
+
                 }
 
 
