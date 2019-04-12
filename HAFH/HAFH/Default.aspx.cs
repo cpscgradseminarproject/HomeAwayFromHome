@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -39,13 +40,33 @@ namespace HAFH
             myReader = SelectUserInfo.ExecuteReader();
 
             //While its reading the Query it will set the values to our form fields.
+
+            Label[,] PropertySynopsis = new Label[5, 5];
+
             while (myReader.Read())
             {
-                LBLPropertyName.Text = myReader["PropertyName"].ToString().Trim();
+                for (int i =0; i <= 4; i++)
+                {
+                    for (int j = 0; j <= 4; j++)
+                    {
+                        Label l = new Label();
+                        PropertySynopsis[i, j] = l;
+                        l.Text = myReader["PropertyName"].ToString().Trim();
+                        PropertySynopsisPage.Controls.Add(l);
+                        PropertySynopsisPage.Controls.Add(new LiteralControl("<br />"));
+                        
+
+                    }
+                }
+
+
+                /*
+                LBLPropertyName+Counter.Text = myReader["PropertyName"].ToString().Trim();
                 LBLAddress.Text = myReader["PropertyAddress"].ToString().Trim();
                 LBLDesc.Text = myReader["PropertyDesc"].ToString().Trim();
                 LBLBedroomCount.Text = myReader["NumberOfBedrooms"].ToString().Trim();
                 LBLBathroomCount.Text = myReader["NumberOfBathrooms"].ToString().Trim();
+                */
             }
             con.Close();
         }
