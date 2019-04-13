@@ -14,11 +14,12 @@ namespace HAFH
 {
     public partial class _Default : Page
     {
-        Label[,] PropertySynopsis = new Label[5, 5];
+        Label[,] PropertySynopsis = new Label[5, 6];
+        int i = 1;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            System.Diagnostics.Debug.WriteLine("Page Loaded");
         }
 
         protected void Page_PreRender(object sender, EventArgs e)
@@ -42,50 +43,83 @@ namespace HAFH
 
             //While its reading the Query it will set the values to our form fields.
 
+        
             while (myReader.Read())
             {
-                for (int i = 0; i <= 0; i++)
-                {
 
-                    PropertySynopsisPage.Controls.Add(new LiteralControl("<div class='PropertySynopsis'>"));
+                PropertySynopsisPage.Controls.Add(new LiteralControl("<div class='PropertySynopsis'>"));
 
-                    Label PropertyName = new Label();
-                    PropertySynopsis[i, 0] = PropertyName;
-                    PropertyName.Text = myReader["PropertyName"].ToString().Trim();
-                    PropertySynopsisPage.Controls.Add(PropertyName);
-                    PropertySynopsisPage.Controls.Add(new LiteralControl("<br />"));
+                Label PropertyName = new Label();
+                PropertyName.ID = "PropName_" + i.ToString();
+                PropertySynopsis[1, 0] = PropertyName;
+                PropertyName.Text = myReader["PropertyName"].ToString().Trim();
+                PropertySynopsisPage.Controls.Add(PropertyName);
+                PropertySynopsisPage.Controls.Add(new LiteralControl("<br />"));
                     
 
-                    Label PropertyAddress = new Label();
-                    PropertySynopsis[i, 1] = PropertyAddress;
-                    PropertyAddress.Text = myReader["PropertyAddress"].ToString().Trim();
-                    PropertySynopsisPage.Controls.Add(PropertyAddress);
-                    PropertySynopsisPage.Controls.Add(new LiteralControl("<br />"));
+                Label PropertyAddress = new Label();
+                PropertyAddress.ID = "PropAdd_" + i.ToString();
+                PropertySynopsis[1, 1] = PropertyAddress;
+                PropertyAddress.Text = myReader["PropertyAddress"].ToString().Trim();
+                PropertySynopsisPage.Controls.Add(PropertyAddress);
+                PropertySynopsisPage.Controls.Add(new LiteralControl("<br />"));
 
 
-                    Label PropertyDesc = new Label();
-                    PropertySynopsis[i, 2] = PropertyDesc;
-                    PropertyDesc.Text = myReader["PropertyDesc"].ToString().Trim();
-                    PropertySynopsisPage.Controls.Add(PropertyDesc);
-                    PropertySynopsisPage.Controls.Add(new LiteralControl("<br />"));
+                Label PropertyDesc = new Label();
+                PropertyDesc.ID = "PropDesc_" + i.ToString();
+                PropertySynopsis[1, 2] = PropertyDesc;
+                PropertyDesc.Text = myReader["PropertyDesc"].ToString().Trim();
+                PropertySynopsisPage.Controls.Add(PropertyDesc);
+                PropertySynopsisPage.Controls.Add(new LiteralControl("<br />"));
 
 
-                    Label PropertyBedroomCount = new Label();
-                    PropertySynopsis[i, 3] = PropertyBedroomCount;
-                    PropertyBedroomCount.Text = myReader["NumberOfBedrooms"].ToString().Trim();
-                    PropertySynopsisPage.Controls.Add(PropertyBedroomCount);
-                    PropertySynopsisPage.Controls.Add(new LiteralControl("<br />"));
+                Label PropertyBedroomCount = new Label();
+                PropertyBedroomCount.ID = "Bedroom_" + i.ToString();
+                PropertySynopsis[1, 3] = PropertyBedroomCount;
+                PropertyBedroomCount.Text = myReader["NumberOfBedrooms"].ToString().Trim();
+                PropertySynopsisPage.Controls.Add(PropertyBedroomCount);
+                PropertySynopsisPage.Controls.Add(new LiteralControl("<br />"));
 
 
-                    Label PropertyBathroomCount = new Label();
-                    PropertySynopsis[i, 4] = PropertyBathroomCount;
-                    PropertyBathroomCount.Text = myReader["NumberOfBathrooms"].ToString().Trim();
-                    PropertySynopsisPage.Controls.Add(PropertyBathroomCount);
-                    PropertySynopsisPage.Controls.Add(new LiteralControl("<br />"));
+                Label PropertyBathroomCount = new Label();
+                PropertyBathroomCount.ID = "bath_" + i.ToString();
+                PropertySynopsis[1, 4] = PropertyBathroomCount;
+                PropertyBathroomCount.Text = myReader["NumberOfBathrooms"].ToString().Trim();
+                PropertySynopsisPage.Controls.Add(PropertyBathroomCount);
+                PropertySynopsisPage.Controls.Add(new LiteralControl("<br />"));
 
-                    PropertySynopsisPage.Controls.Add(new LiteralControl("</div>"));
+                Label PropertyID = new Label();
+                PropertyID.ID = "PropID_" + i.ToString();
+                PropertySynopsis[1, 5] = PropertyID;
+                PropertyID.Text = myReader["PropertyID"].ToString().Trim();
+                PropertyID.Visible = false;
+                PropertySynopsisPage.Controls.Add(PropertyID);
+                PropertySynopsisPage.Controls.Add(new LiteralControl("<br />"));
 
-                }
+
+                /*
+                Button BTNFullListing = new Button();
+                BTNFullListing.Text = "View Full Listing";
+                BTNFullListing.ID = "lising_" + i.ToString();
+                BTNFullListing.Font.Size = FontUnit.Point(12);
+                BTNFullListing.ControlStyle.CssClass = "btn btn-default";
+                BTNFullListing.CommandArgument = "Listing.aspx";
+                BTNFullListing.Click += new EventHandler (FullListing);
+                PropertySynopsisPage.Controls.Add(BTNFullListing);
+                */
+                Button BTNFullListing = new Button();
+                BTNFullListing.Text = "View Full Listing";
+                BTNFullListing.ID = "listing_" + i.ToString();
+                BTNFullListing.Font.Size = FontUnit.Point(12);
+                BTNFullListing.ControlStyle.CssClass = "btn btn-default";
+                //BTNFullListing.Click;
+                PropertySynopsisPage.Controls.Add(BTNFullListing);
+
+                i++;
+
+                PropertySynopsisPage.Controls.Add(new LiteralControl("</div>"));
+
+                
 
 
                 /*
@@ -107,6 +141,21 @@ namespace HAFH
         protected void BTNLogin_Click(object sender, EventArgs e)
         {
             Response.Redirect("Login.aspx");
+        }
+
+        protected void FullListing(object sender, EventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("Main Method ran.");
+            Console.WriteLine("");
+            if(Page.IsPostBack)
+            {
+                System.Diagnostics.Debug.WriteLine("The If statement ran");
+                Response.Redirect("Listing.aspx");
+            }
+            //if ()
+            //{
+            //Response.Redirect("Listing.asx?PropertyID=" + );
+            //}
         }
     }
 }
