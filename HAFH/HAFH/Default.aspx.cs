@@ -20,6 +20,7 @@ namespace HAFH
         protected void Page_Load(object sender, EventArgs e)
         {
             System.Diagnostics.Debug.WriteLine("Page Loaded");
+
         }
 
         protected void Page_PreRender(object sender, EventArgs e)
@@ -97,16 +98,8 @@ namespace HAFH
                 PropertySynopsisPage.Controls.Add(new LiteralControl("<br />"));
 
 
-                /*
-                Button BTNFullListing = new Button();
-                BTNFullListing.Text = "View Full Listing";
-                BTNFullListing.ID = "lising_" + i.ToString();
-                BTNFullListing.Font.Size = FontUnit.Point(12);
-                BTNFullListing.ControlStyle.CssClass = "btn btn-default";
-                BTNFullListing.CommandArgument = "Listing.aspx";
-                BTNFullListing.Click += new EventHandler (FullListing);
-                PropertySynopsisPage.Controls.Add(BTNFullListing);
-                */
+
+
                 Button BTNFullListing = new Button();
                 BTNFullListing.Text = "View Full Listing";
                 BTNFullListing.ID = "listing_" + i.ToString();
