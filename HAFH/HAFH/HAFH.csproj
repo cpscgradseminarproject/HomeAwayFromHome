@@ -148,6 +148,7 @@
     <Content Include="Bounce\BannedBounce.aspx" />
     <Content Include="Bounce\LoginBounce.aspx" />
     <Content Include="Bounce\SuccessBounce.aspx" />
+    <Content Include="DefaultDataListTest.aspx" />
     <Content Include="PropertyManagerDash\AccountBalance.aspx" />
     <Content Include="PropertyManagerDash\AddNewProperty.aspx" />
     <Content Include="AdminDash\ManageCities.aspx" />
@@ -247,6 +248,13 @@
     </Compile>
     <Compile Include="Bounce\SuccessBounce.aspx.designer.cs">
       <DependentUpon>SuccessBounce.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultDataListTest.aspx.cs">
+      <DependentUpon>DefaultDataListTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultDataListTest.aspx.designer.cs">
+      <DependentUpon>DefaultDataListTest.aspx</DependentUpon>
     </Compile>
     <Compile Include="PropertyManagerDash\AccountBalance.aspx.cs">
       <DependentUpon>AccountBalance.aspx</DependentUpon>

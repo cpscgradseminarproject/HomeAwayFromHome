@@ -3,7 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     
     <div class="col-md-8">
-    <h2>Recent listings</h2>
+    <h1>Recent listings</h1>
 
         <div class ="PropertySynopsis">
             <asp:Label ID="LBLPropertyTitle_1" runat="server" Text="Title"></asp:Label>
