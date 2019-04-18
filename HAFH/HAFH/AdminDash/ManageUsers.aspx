@@ -3,7 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h1>Manage Users</h1>
 
-<asp:GridView runat="server" AutoGenerateColumns="False" DataKeyNames="RoleId" DataSourceID="HAFHDB" CellPadding="4" ForeColor="#333333" GridLines="None" Width="795px" ID="GVManageUsers" AllowPaging="True" AllowSorting="True">
+<asp:GridView runat="server" AutoGenerateColumns="False" DataKeyNames="RoleId,UserId" DataSourceID="HAFHDB" CellPadding="4" ForeColor="#333333" GridLines="None" Width="795px" ID="GVManageUsers" AllowPaging="True" AllowSorting="True" OnDataBinding="Page_Load">
     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
     <Columns>
         <asp:CommandField ShowEditButton="True" />
