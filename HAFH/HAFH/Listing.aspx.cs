@@ -11,6 +11,12 @@ namespace HAFH
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            String PropertyId = Request.QueryString["PropertyId"];
+            LBLTest.Text = PropertyId;
+        }
+
+        protected void PagePopulate()
+        {
 
         }
     }

@@ -83,7 +83,12 @@ namespace HAFH
             update_item.CommandType = CommandType.StoredProcedure;
             update_item.Parameters.Add("@Id", SqlDbType.NVarChar).Value = CurrentUser;
             update_item.Parameters.Add("@Email", SqlDbType.NVarChar).Value = TxtEmail.Text;
-            update_item.Parameters.Add("@Password", SqlDbType.NVarChar).Value = TxtPsswrd.Text;
+
+
+            PasswordHasher HashWord = new PasswordHasher();
+            update_item.Parameters.Add("@Password", SqlDbType.NVarChar).Value = HashWord.HashPassword(TxtPsswrdcfrm.Text); ;
+
+
             update_item.Parameters.Add("@PhoneNumber", SqlDbType.NVarChar).Value = TxtPhoneNumber.Text;
             update_item.Parameters.Add("@Username", SqlDbType.NVarChar).Value = TxtUsername.Text;
             update_item.Parameters.Add("@FirstName", SqlDbType.NVarChar).Value = TxtFirstName.Text;

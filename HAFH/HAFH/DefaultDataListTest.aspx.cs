@@ -23,5 +23,10 @@ namespace HAFH
         {
             Response.Redirect("Login.aspx");
         }
+
+        protected void DataList_ItemCommand(object source, DataListCommandEventArgs e)
+    {
+        Response.Redirect("Listing.aspx?PropertyId=" + e.CommandArgument.ToString());
+    }
     }
 }

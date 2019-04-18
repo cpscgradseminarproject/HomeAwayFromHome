@@ -6,6 +6,7 @@
         <p>
             <asp:Literal runat="server" ID="StatusMessage" />
         </p>   
+    <asp:Label ID="LBLTest" runat="server"></asp:Label>
     <div ID="Listing Container">
 
         <div>

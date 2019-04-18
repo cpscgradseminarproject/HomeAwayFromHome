@@ -4,7 +4,7 @@
     <div class="col-md-8">
     <h1>Recent listings</h1>
             
-    <asp:DataList ID="DataList1" runat="server" CellPadding="3" DataKeyField="PropertyID" DataSourceID="SqlDataSource1" Width="100%">
+    <asp:DataList ID="DataList1" runat="server" CellPadding="3" DataKeyField="PropertyID" OnItemCommand="DataList_ItemCommand" DataSourceID="SqlDataSource1" Width="100%">
         <ItemTemplate>
             <table class="PropertySynopsis" style="width:100%">
                 <tr>
@@ -29,9 +29,14 @@
                         <asp:Label ID="CostPerNightLabel" runat="server" Text='<%# Eval("CostPerNight") %>' />
                         <br />
                         <asp:Label ID="PropertyIDLabel" Visible="false"  runat="server" Text='<%# Eval("PropertyID") %>' />
-                        <asp:Button ID="ViewListing" Text="View Full Listing" runat="server" CommandArgument= '<%# Eval("PropertyID") %>' />
-                        <p></p>
                         <br />
+                        <asp:Button ID="ViewListing" Text="View Full Listing" CommandArgument='<%# Eval("PropertyID") %>' runat="server" />                        
+                        <br />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;
                     </td>
                 </tr>
             </table>
@@ -40,7 +45,7 @@
         </ItemTemplate>
 
     </asp:DataList>    
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [PropertyID], [PropertyName], [PropertyCity], [PropertyState], [NumberOfBedrooms], [NumberOfBathrooms], [PropertyDesc], [CostPerNight] FROM [Property]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SelectPropertySynopsis" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
     <br />
     <br/ />
 
