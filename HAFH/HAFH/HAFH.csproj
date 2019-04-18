@@ -159,7 +159,6 @@
     <Content Include="PropertyManagerDash\ManageProperties.aspx" />
     <Content Include="Scripts\JavaScript.js" />
     <Content Include="CustomerDash\UserInfo.aspx" />
-    <Content Include="CustomerDash\AddPaymentCard.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -167,7 +166,6 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
-    <Content Include="CustomerDash\EditPaymentCard.aspx" />
     <Content Include="PropertyManagerDash\EditProperty.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -319,13 +317,6 @@
     <Compile Include="CustomerDash\UserInfo.aspx.designer.cs">
       <DependentUpon>UserInfo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CustomerDash\AddPaymentCard.aspx.cs">
-      <DependentUpon>AddPaymentCard.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CustomerDash\AddPaymentCard.aspx.designer.cs">
-      <DependentUpon>AddPaymentCard.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -348,13 +339,6 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CustomerDash\EditPaymentCard.aspx.cs">
-      <DependentUpon>EditPaymentCard.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CustomerDash\EditPaymentCard.aspx.designer.cs">
-      <DependentUpon>EditPaymentCard.aspx</DependentUpon>
     </Compile>
     <Compile Include="PropertyManagerDash\EditProperty.aspx.cs">
       <DependentUpon>EditProperty.aspx</DependentUpon>
