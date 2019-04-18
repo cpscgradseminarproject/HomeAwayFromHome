@@ -1,20 +1,41 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ManagePayments.aspx.cs" Inherits="HAFH.PaymentManagement" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
      <h2 style="font-size: medium">Manage Payment Methods</h2>
-    <asp:GridView ID="PaymentGvw" runat="server" AutoGenerateColumns="False" DataKeyNames="PaymentID" DataSourceID="DBManagePayments">
+    <asp:GridView ID="PaymentGvw" runat="server" AutoGenerateColumns="False" DataKeyNames="PaymentID" DataSourceID="DBManagePayments" Width="925px">
         <Columns>
             <asp:BoundField DataField="PaymentID" HeaderText="PaymentID" InsertVisible="False" ReadOnly="True" SortExpression="PaymentID" />
-            <asp:BoundField DataField="UserID" HeaderText="UserID" SortExpression="UserID" />
+            <asp:BoundField DataField="UserID" HeaderText="UserID" SortExpression="UserID" Visible="False" />
             <asp:BoundField DataField="NameOnCard" HeaderText="NameOnCard" SortExpression="NameOnCard" />
             <asp:BoundField DataField="CardNumber" HeaderText="CardNumber" SortExpression="CardNumber" />
             <asp:BoundField DataField="CardType" HeaderText="CardType" SortExpression="CardType" />
             <asp:BoundField DataField="SecurityCode" HeaderText="SecurityCode" SortExpression="SecurityCode" />
+            <asp:BoundField DataField="ExpDate" HeaderText="ExpDate" SortExpression="ExpDate" />
         </Columns>
     </asp:GridView>
-    <asp:SqlDataSource ID="DBManagePayments" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * FROM [PaymentOptions] WHERE ([UserID] = @UserID)">
-        <SelectParameters>
+    <asp:SqlDataSource ID="DBManagePayments" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * FROM [PaymentOptions] WHERE ([UserID] = @UserID)" DeleteCommand="DELETE FROM [PaymentOptions] WHERE [PaymentID] = @PaymentID" InsertCommand="INSERT INTO [PaymentOptions] ([UserID], [NameOnCard], [CardNumber], [CardType], [SecurityCode], [ExpDate]) VALUES (@UserID, @NameOnCard, @CardNumber, @CardType, @SecurityCode, @ExpDate)" UpdateCommand="UPDATE [PaymentOptions] SET [UserID] = @UserID, [NameOnCard] = @NameOnCard, [CardNumber] = @CardNumber, [CardType] = @CardType, [SecurityCode] = @SecurityCode, [ExpDate] = @ExpDate WHERE [PaymentID] = @PaymentID">
+        <DeleteParameters>
+            <asp:Parameter Name="PaymentID" Type="Int32" />
+        </DeleteParameters>
+        <InsertParameters>
             <asp:Parameter Name="UserID" Type="String" />
+            <asp:Parameter Name="NameOnCard" Type="String" />
+            <asp:Parameter Name="CardNumber" Type="String" />
+            <asp:Parameter Name="CardType" Type="String" />
+            <asp:Parameter Name="SecurityCode" Type="String" />
+            <asp:Parameter DbType="Date" Name="ExpDate" />
+        </InsertParameters>
+        <SelectParameters>
+            <asp:ControlParameter ControlID="LBLCurrentUser" Name="UserID" PropertyName="Text" Type="String" />
         </SelectParameters>
+        <UpdateParameters>
+            <asp:Parameter Name="UserID" Type="String" />
+            <asp:Parameter Name="NameOnCard" Type="String" />
+            <asp:Parameter Name="CardNumber" Type="String" />
+            <asp:Parameter Name="CardType" Type="String" />
+            <asp:Parameter Name="SecurityCode" Type="String" />
+            <asp:Parameter DbType="Date" Name="ExpDate" />
+            <asp:Parameter Name="PaymentID" Type="Int32" />
+        </UpdateParameters>
      </asp:SqlDataSource>
 
     <br />
