@@ -29,5 +29,14 @@ namespace HAFH.AdminDash {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource HAFHDB;
+        
+        /// <summary>
+        /// UserRoleData control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource UserRoleData;
     }
 }
