@@ -22,40 +22,13 @@ namespace HAFH {
         protected global::System.Web.UI.WebControls.Literal StatusMessage;
         
         /// <summary>
-        /// LBLTest control.
+        /// LBLPropName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LBLTest;
-        
-        /// <summary>
-        /// PropNameLbl control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label PropNameLbl;
-        
-        /// <summary>
-        /// PropAdddrLbl control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label PropAdddrLbl;
-        
-        /// <summary>
-        /// PropDescrLbl control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label PropDescrLbl;
+        protected global::System.Web.UI.WebControls.Label LBLPropName;
         
         /// <summary>
         /// Image1 control.
@@ -67,12 +40,84 @@ namespace HAFH {
         protected global::System.Web.UI.WebControls.Image Image1;
         
         /// <summary>
-        /// PropSelectBtn control.
+        /// LBLPropAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button PropSelectBtn;
+        protected global::System.Web.UI.WebControls.Label LBLPropAddress;
+        
+        /// <summary>
+        /// LBLPropCity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LBLPropCity;
+        
+        /// <summary>
+        /// LBLPropState control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LBLPropState;
+        
+        /// <summary>
+        /// LBLPropZipcode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LBLPropZipcode;
+        
+        /// <summary>
+        /// LBLNumBedrooms control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LBLNumBedrooms;
+        
+        /// <summary>
+        /// LBLNumBathrooms control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LBLNumBathrooms;
+        
+        /// <summary>
+        /// LBLPropDescr control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LBLPropDescr;
+        
+        /// <summary>
+        /// LBLCostPerNight control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LBLCostPerNight;
+        
+        /// <summary>
+        /// BTNReservation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BTNReservation;
     }
 }

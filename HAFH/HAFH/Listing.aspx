@@ -6,18 +6,35 @@
         <p>
             <asp:Literal runat="server" ID="StatusMessage" />
         </p>   
-    <asp:Label ID="LBLTest" runat="server"></asp:Label>
     <div ID="Listing Container">
 
         <div>
-            <asp:Label runat="server" ID="PropNameLbl" Text="Property Name" Font-Size="X-Large"></asp:Label>
+            <asp:Label runat="server" ID="LBLPropName" Font-Size="X-Large"></asp:Label>
             <br />
-            <asp:Label runat="server" ID="PropAdddrLbl" Text="Property Address" Font-Size="Large"></asp:Label>
-            <br />
-            <asp:Label runat="server" ID="PropDescrLbl" Text="This is a description of the property" Width="40%" Height="35%"></asp:Label>
             <asp:Image ID="Image1" runat="server" Height="175px" Width="175px" BorderColor="White" BorderWidth="10px"/>
             <br />
-            <asp:Button runat="server" ID="PropSelectBtn"  Text="View Listing" />
+            <h4>Address: </h4>            
+            <asp:Label runat="server" ID="LBLPropAddress"></asp:Label>
+            , 
+            <asp:Label runat="server" ID="LBLPropCity"></asp:Label>
+            , 
+            <asp:Label runat="server" ID="LBLPropState"></asp:Label>
+            , 
+            <asp:Label runat="server" ID="LBLPropZipcode"></asp:Label>
+            <br />
+            <h4>Number of Bedrooms: </h4>
+            <asp:Label runat="server" ID="LBLNumBedrooms"></asp:Label>
+            <br />
+            <h4>Number of Bathrooms: </h4>
+            <asp:Label runat="server" ID="LBLNumBathrooms"></asp:Label>
+            <br />
+            <h4>Description: </h4>
+            <asp:Label runat="server" ID="LBLPropDescr" Width="40%" Height="35%"></asp:Label>
+            <br />
+            <h4>Rate Per Night: </h4>
+            <asp:Label runat="server" ID="LBLCostPerNight"></asp:Label>
+            <br />
+            <asp:Button runat="server" ID="BTNReservation"  Text="Make Reservation" />
         </div>
        
 
