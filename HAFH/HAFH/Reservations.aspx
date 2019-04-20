@@ -55,6 +55,7 @@
     <div>
         <asp:Button ID="BTNReserve" runat="server" Text="Book Now" OnClick="BTNReserve_Click" />
     </div>
+        <asp:CheckBox ID ="ReservationCheck" Checked="true" runat="server" />
 
     <br />
 </div>

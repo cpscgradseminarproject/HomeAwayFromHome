@@ -23,8 +23,6 @@ namespace HAFH
             LoadPropertyInfo();
         }
 
-        
-
         protected void LoadPropertyInfo()
         {
             //string StateValue;
@@ -74,11 +72,20 @@ namespace HAFH
             LBLCheckin.Text = CalCheckin.SelectedDate.ToShortDateString();
         }
 
-        protected void BTNReserve_Click(object sender, EventArgs e)
+
+
+
+
+
+
+
+
+
+        protected void MakeReservation()
         {
             string PropertyId = Request.QueryString["PropertyId"];
             string CurrentUser = User.Identity.GetUserId();
-            string PropertyID = PropertyId;            
+            string PropertyID = PropertyId;
             string Checkin = LBLCheckin.Text;
             string Checkout = LBLCheckout.Text;
             string RentalTotalCost = LBLTotalCost.Text;
@@ -93,10 +100,55 @@ namespace HAFH
                 command.Parameters.Add("@Checkin", SqlDbType.DateTime).Value = Checkin;
                 command.Parameters.Add("@Checkout", SqlDbType.DateTime).Value = Checkout;
                 command.Parameters.Add("@RentalTotalCost", SqlDbType.Money).Value = RentalTotalCost;
-                
+
                 con.Open();
                 command.ExecuteNonQuery();
+                con.Close();
+                System.Diagnostics.Debug.WriteLine(" make reservation connection has run and closed");
             }
+        }
+
+        private void OpenWindow()
+        {
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('A Reservation for these dates already exists');</script>");
+        }
+
+        protected void ConflictCheck()
+        {
+            string PropertyID = Request.QueryString["PropertyId"];
+
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ToString());
+            con.Open();
+            SqlDataReader myReader = null;
+
+            SqlCommand CheckConflict = new SqlCommand("ReservationConflictCheck", con) { CommandType = CommandType.StoredProcedure };
+
+            CheckConflict.Parameters.Add("@PropertyID", SqlDbType.Int).Value = PropertyID;
+            CheckConflict.Parameters.Add("@Checkin", SqlDbType.DateTime).Value = CalCheckin.SelectedDate;
+            CheckConflict.Parameters.Add("@Checkout", SqlDbType.DateTime).Value = CalCheckout.SelectedDate;
+
+            CheckConflict.Connection = con;
+
+            myReader = CheckConflict.ExecuteReader();
+
+            while (myReader.Read())
+            {
+                if (myReader.HasRows)
+                {
+                    OpenWindow();
+                }
+            }
+
+            if(myReader.HasRows == false)
+            {
+                MakeReservation();
+            }
+            con.Close();
+        }
+
+        protected void BTNReserve_Click(object sender, EventArgs e)
+        {
+            ConflictCheck();
         }
     }
 }
