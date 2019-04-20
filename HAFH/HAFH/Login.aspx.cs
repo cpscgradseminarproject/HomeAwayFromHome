@@ -16,55 +16,7 @@ namespace HAFH
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                if (User.Identity.IsAuthenticated)
-                {
-                    StatusText.Text = string.Format("Hello {0}!!", User.Identity.GetUserName());
-                    LoginStatus.Visible = true;
-                    LogoutButton.Visible = true;
-
-                    CustomerPanel.Visible = true;
-
-                    if (User.Identity.IsAuthenticated)
-                    {
-                        string CurrentUser = User.Identity.GetUserId();
-                        int CurrentUserRole;
-
-                        string conn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-                        SqlConnection con = new SqlConnection(conn);
-                        con.Open();
-                        string strSelect = "Select RoleID From AspNetUserRoles where UserID = @CurrentUser";
-                        SqlCommand cmd = new SqlCommand(strSelect, con);
-
-                        cmd.Parameters.AddWithValue("@CurrentUser", CurrentUser);
-
-                        SqlDataReader myReader = cmd.ExecuteReader();
-
-                        myReader.Close();
-                        CurrentUserRole = Convert.ToInt16(cmd.ExecuteScalar());
-
-                        con.Close();
-
-                        if (CurrentUserRole == 0002)
-                        {
-                            PropertManagerPanel.Visible = true;
-                            BTNPMApp.Visible = false;
-                        }
-
-                        if (CurrentUserRole == 0003)
-                        {
-                            Response.Redirect("AdminPanel.aspx");
-                        }
-
-                }
-
-            }
-                else
-                {
-                    LoginForm.Visible = true;
-                }
-            }
+            LoginPageManager();
         }
 
         protected void SignIn(object sender, EventArgs e)
@@ -138,6 +90,135 @@ namespace HAFH
         protected void BTNViewRentalHistory_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/CustomerDash/ViewRentalHistory.aspx");
+        }
+
+        public void LoginPageManager()
+        {
+            if (!IsPostBack)
+            {
+                if (User.Identity.IsAuthenticated)
+                {
+                    StatusText.Text = string.Format("Hello {0}!!", User.Identity.GetUserName());
+                    LoginStatus.Visible = true;
+                    LogoutButton.Visible = true;
+
+                    CustomerPanel.Visible = true;
+
+                    if (User.Identity.IsAuthenticated)
+                    {
+                        string CurrentUser = User.Identity.GetUserId();
+                        int CurrentUserRole;
+
+                        string conn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+                        SqlConnection con = new SqlConnection(conn);
+                        con.Open();
+                        string strSelect = "Select RoleID From AspNetUserRoles where UserID = @CurrentUser";
+                        SqlCommand cmd = new SqlCommand(strSelect, con);
+
+                        cmd.Parameters.AddWithValue("@CurrentUser", CurrentUser);
+
+                        SqlDataReader myReader = cmd.ExecuteReader();
+
+                        myReader.Close();
+                        CurrentUserRole = Convert.ToInt16(cmd.ExecuteScalar());
+
+                        con.Close();
+
+                        if (CurrentUserRole == 0002)
+                        {
+                            //They are a property manager show them the property manager panel
+                            PropertManagerPanel.Visible = true;
+                            BTNPMApp.Visible = false;
+                        }
+
+                        if (CurrentUserRole == 0003)
+                        {
+                            //They are an admin show them the admin page.
+                            Response.Redirect("AdminPanel.aspx");
+                        }
+
+                        if (CurrentUserRole == 0004)
+                        {
+                            //They are the site owner so show them the things...
+                        }
+
+                        if (CurrentUserRole == 0005)
+                        {
+                            //They are banned show them the door
+                        }
+                    }
+                }
+                else
+                {
+                    LoginForm.Visible = true;
+                }
+            }
+        }
+
+        public void BasicLoginCheck()
+        {
+            if (User.Identity.IsAuthenticated == false)
+            {
+                HttpContext.Current.Response.Redirect("~/Bounce/LoginBounce.aspx");
+            }
+        }
+
+        public void PropertyManagerRoleCheck()
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                string CurrentUser = User.Identity.GetUserId();
+                int CurrentUserRole;
+
+                string conn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+                SqlConnection con = new SqlConnection(conn);
+                con.Open();
+                string strSelect = "Select RoleID From AspNetUserRoles where UserID = @CurrentUser";
+                SqlCommand cmd = new SqlCommand(strSelect, con);
+
+                cmd.Parameters.AddWithValue("@CurrentUser", CurrentUser);
+
+                SqlDataReader myReader = cmd.ExecuteReader();
+
+                myReader.Close();
+                CurrentUserRole = Convert.ToInt16(cmd.ExecuteScalar());
+
+                con.Close();
+
+                if (CurrentUserRole == 0001)
+                {
+                    //they are a customer only and not authorized to view this page.
+                    HttpContext.Current.Response.Redirect("~/Bounce/NotAuthorizedBounce.aspx");
+                }
+
+                if (CurrentUserRole == 0002)
+                {
+                    //Do nothing because they should be authorized to view this page
+                }
+
+                if (CurrentUserRole == 0003)
+                {
+                    //Lockout
+                    HttpContext.Current.Response.Redirect("~/Bounce/NotAuthorizedBounce.aspx");
+                }
+
+                if (CurrentUserRole == 0004)
+                {
+                    //They are the site owner so show them the things...
+
+                }
+
+                if (CurrentUserRole == 0005)
+                {
+                    //They are banned show them the door
+                    HttpContext.Current.Response.Redirect("~/Bounce/BannedBounce.aspx");
+                }
+            }
+
+            if (User.Identity.IsAuthenticated == false)
+            {
+                HttpContext.Current.Response.Redirect("~/Bounce/LoginBounce.aspx");
+            }
         }
     }
 }

@@ -19,38 +19,35 @@ namespace HAFH
             {
                 if (User.Identity.IsAuthenticated)
                 {
-                    if (User.Identity.IsAuthenticated)
+                    string CurrentUser = User.Identity.GetUserId();
+                    int CurrentUserRole;
+
+                    string conn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+                    SqlConnection con = new SqlConnection(conn);
+                    con.Open();
+                    string strSelect = "Select RoleID From AspNetUserRoles where UserID = @CurrentUser";
+                    SqlCommand cmd = new SqlCommand(strSelect, con);
+
+                    cmd.Parameters.AddWithValue("@CurrentUser", CurrentUser);
+
+                    SqlDataReader myReader = cmd.ExecuteReader();
+
+                    myReader.Close();
+                    CurrentUserRole = Convert.ToInt16(cmd.ExecuteScalar());
+
+                    con.Close();
+
+                    if (CurrentUserRole == 0001)
                     {
-                        string CurrentUser = User.Identity.GetUserId();
-                        int CurrentUserRole;
-
-                        string conn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-                        SqlConnection con = new SqlConnection(conn);
-                        con.Open();
-                        string strSelect = "Select RoleID From AspNetUserRoles where UserID = @CurrentUser";
-                        SqlCommand cmd = new SqlCommand(strSelect, con);
-
-                        cmd.Parameters.AddWithValue("@CurrentUser", CurrentUser);
-
-                        SqlDataReader myReader = cmd.ExecuteReader();
-
-                        myReader.Close();
-                        CurrentUserRole = Convert.ToInt16(cmd.ExecuteScalar());
-
-                        con.Close();
-
-                        if (CurrentUserRole == 0001)
-                        {
-                            PanelApplication.Visible = true;
-                        }
-
-                        else
-                        {
-                            Response.Redirect("Login.aspx");
-                        }
+                        PanelApplication.Visible = true;
                     }
 
+                    else
+                    {
+                        Response.Redirect("Login.aspx");
+                    }
                 }
+
                 else
                 {
                     Response.Redirect("Login.aspx");
