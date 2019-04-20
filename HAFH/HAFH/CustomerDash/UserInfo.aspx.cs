@@ -15,6 +15,8 @@ namespace HAFH
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Login PageCheck = new Login();
+            PageCheck.BasicLoginCheck();
             string CurrentUser = User.Identity.GetUserId();
         }
 

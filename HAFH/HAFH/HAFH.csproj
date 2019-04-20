@@ -147,6 +147,7 @@
     <Content Include="About.aspx" />
     <Content Include="Bounce\BannedBounce.aspx" />
     <Content Include="Bounce\LoginBounce.aspx" />
+    <Content Include="Bounce\NotAuthorizedBounce.aspx" />
     <Content Include="Bounce\SuccessBounce.aspx" />
     <Content Include="DefaultDataListTest.aspx" />
     <Content Include="PropertyManagerDash\AccountBalance.aspx" />
@@ -239,6 +240,13 @@
     </Compile>
     <Compile Include="Bounce\LoginBounce.aspx.designer.cs">
       <DependentUpon>LoginBounce.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bounce\NotAuthorizedBounce.aspx.cs">
+      <DependentUpon>NotAuthorizedBounce.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bounce\NotAuthorizedBounce.aspx.designer.cs">
+      <DependentUpon>NotAuthorizedBounce.aspx</DependentUpon>
     </Compile>
     <Compile Include="Bounce\SuccessBounce.aspx.cs">
       <DependentUpon>SuccessBounce.aspx</DependentUpon>
@@ -400,6 +408,7 @@
     <Compile Include="PossiblyCutPages\ViewDisputesAgainstYou.aspx.designer.cs">
       <DependentUpon>ViewDisputesAgainstYou.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SystemClasses\LoginManager.cs" />
     <Compile Include="ViewProperty.aspx.cs">
       <DependentUpon>ViewProperty.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -15,7 +15,8 @@ namespace HAFH
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            Login PageCheck = new Login();
+            PageCheck.BasicLoginCheck();
         }
 
         protected void Page_PreRender(object sender, EventArgs e)
