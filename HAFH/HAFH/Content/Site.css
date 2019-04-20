@@ -24,6 +24,16 @@ body {
     border-radius: 5px;
 }
 
+.HAFHCal
+{
+    text-align:center;
+    margin-bottom: 50px;
+    display: inline-block;
+    margin-left: auto;
+    margin-right:auto;
+
+}
+
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {

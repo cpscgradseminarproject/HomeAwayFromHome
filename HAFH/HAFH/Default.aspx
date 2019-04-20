@@ -4,90 +4,51 @@
     
     <div class="col-md-8">
     <h1>Recent listings</h1>
-
-        <div class ="PropertySynopsis">
-            <asp:Label ID="LBLPropertyTitle_1" runat="server" Text="Title"></asp:Label>
-            <br />
-            <asp:Label ID="LBLAddress_1" runat="server" Text="Address"></asp:Label>
-            <br />
-            <asp:Label ID="LBLPropertyID_1" runat="server" Text="PropertyID"></asp:Label>
-            <br />
-            <asp:Label ID="LBLDesc_1" runat="server" Text="Desc"></asp:Label>
-            <br />
-            <asp:Label ID="LBLBedroomCount_1" runat="server" Text="BedroomCount"></asp:Label>
-            <br />
-            <asp:Label ID="LBLBathroomCount_1" runat="server" Text="BathroomCount"></asp:Label>
-            <br />
-            <asp:Button ID="BTNViewFullListing_1" runat="server" Text="View Full Listing" OnClick="FullListing" />
-        </div>
-
-        <div class ="PropertySynopsis">
-            <asp:Label ID="LBLPropertyTitle_2" runat="server" Text="Title"></asp:Label>
-            <br />
-            <asp:Label ID="LBLAddress_2" runat="server" Text="Address"></asp:Label>
-            <br />
-            <asp:Label ID="LBLPropertyID_2" runat="server" Text="PropertyID"></asp:Label>
-            <br />
-            <asp:Label ID="LBLDesc_2" runat="server" Text="Desc"></asp:Label>
-            <br />
-            <asp:Label ID="LBLBedroomCount_2" runat="server" Text="BedroomCount"></asp:Label>
-            <br />
-            <asp:Label ID="LBLBathroomCount_2" runat="server" Text="BathroomCount"></asp:Label>
-            <br />
-            <asp:Button ID="BTNViewFullListing_2" runat="server" Text="View Full Listing" />
-        </div>
-
-        <div class ="PropertySynopsis">
-            <asp:Label ID="LBLPropertyTitle_3" runat="server" Text="Title"></asp:Label>
-            <br />
-            <asp:Label ID="LBLAddress_3" runat="server" Text="Address"></asp:Label>
-            <br />
-            <asp:Label ID="LBLPropertyID_3" runat="server" Text="PropertyID"></asp:Label>
-            <br />
-            <asp:Label ID="LBLDesc_3" runat="server" Text="Desc"></asp:Label>
-            <br />
-            <asp:Label ID="LBLBedroomCount_3" runat="server" Text="BedroomCount"></asp:Label>
-            <br />
-            <asp:Label ID="LBLBathroomCount_3" runat="server" Text="BathroomCount"></asp:Label>
-            <br />
-            <asp:Button ID="BTNViewFullListing_3" runat="server" Text="View Full Listing" />
-        </div>
-
-        <div class ="PropertySynopsis">
-            <asp:Label ID="LBLPropertyTitle_4" runat="server" Text="Title"></asp:Label>
-            <br />
-            <asp:Label ID="LBLAddress_4" runat="server" Text="Address"></asp:Label>
-            <br />
-            <asp:Label ID="LBLPropertyID_4" runat="server" Text="PropertyID"></asp:Label>
-            <br />
-            <asp:Label ID="LBLDesc_4" runat="server" Text="Desc"></asp:Label>
-            <br />
-            <asp:Label ID="LBLBedroomCount_4" runat="server" Text="BedroomCount"></asp:Label>
-            <br />
-            <asp:Label ID="LBLBathroomCount_4" runat="server" Text="BathroomCount"></asp:Label>
-            <br />
-            <asp:Button ID="BTNViewFullListing_4" runat="server" Text="View Full Listing" />
-        </div>
-
-        <div class ="PropertySynopsis">
-            <asp:Label ID="LBLPropertyTitle_5" runat="server" Text="Title"></asp:Label>
-            <br />
-            <asp:Label ID="LBLAddress_5" runat="server" Text="Address"></asp:Label>
-            <br />
-            <asp:Label ID="LBLPropertyID_5" runat="server" Text="PropertyID"></asp:Label>
-            <br />
-            <asp:Label ID="LBLDesc_5" runat="server" Text="Desc"></asp:Label>
-            <br />
-            <asp:Label ID="LBLBedroomCount_5" runat="server" Text="BedroomCount"></asp:Label>
-            <br />
-            <asp:Label ID="LBLBathroomCount_5" runat="server" Text="BathroomCount"></asp:Label>
-            <br />
-            <asp:Button ID="BTNViewFullListing_5" runat="server" Text="View Full Listing" />
-        </div>
+            
+    <asp:DataList ID="DataList1" runat="server" CellPadding="3" DataKeyField="PropertyID" OnItemCommand="DataList_ItemCommand" DataSourceID="SqlDataSource1" Width="100%">
+        <ItemTemplate>
+            <table class="PropertySynopsis" style="width:100%">
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                    <td>
+                        <h3><asp:Label ID="PropertyNameLabel" runat="server" Text='<%# Eval("PropertyName") %>' /></h3>
+                        City:
+                        <asp:Label ID="PropertyCityLabel" runat="server" Text='<%# Eval("PropertyCity") %>' />
+                        <br />
+                        State:
+                        <asp:Label ID="PropertyStateLabel" runat="server" Text='<%# Eval("PropertyState") %>' />
+                        <br />
+                        Bedrooms:
+                        <asp:Label ID="NumberOfBedroomsLabel" runat="server" Text='<%# Eval("NumberOfBedrooms") %>' />
+                        <br />
+                        Bathrooms:
+                        <asp:Label ID="NumberOfBathroomsLabel" runat="server" Text='<%# Eval("NumberOfBathrooms") %>' />
+                        <br />
+                        CostPerNight:
+                        <asp:Label ID="CostPerNightLabel" runat="server" Text='<%# Eval("CostPerNight") %>' />
+                        <br />
+                        <asp:Label ID="PropertyIDLabel" Visible="false"  runat="server" Text='<%# Eval("PropertyID") %>' />
+                        <br />
+                        <asp:Button ID="ViewListing" Text="View Full Listing" CommandArgument='<%# Eval("PropertyID") %>' runat="server" />                        
+                        <br />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+            </table>
 
 
-    <asp:PlaceHolder ID="PropertySynopsisPage" runat="server">
-    </asp:PlaceHolder>
+        </ItemTemplate>
+
+    </asp:DataList>    
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SelectPropertySynopsis" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+    <br />
+    <br/ />
 
 
     </div>

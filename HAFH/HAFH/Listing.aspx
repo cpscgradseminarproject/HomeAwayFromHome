@@ -15,11 +15,8 @@
             <br />
             <h4>Address: </h4>            
             <asp:Label runat="server" ID="LBLPropAddress"></asp:Label>
-            , 
             <asp:Label runat="server" ID="LBLPropCity"></asp:Label>
-            , 
             <asp:Label runat="server" ID="LBLPropState"></asp:Label>
-            , 
             <asp:Label runat="server" ID="LBLPropZipcode"></asp:Label>
             <br />
             <h4>Number of Bedrooms: </h4>
@@ -34,7 +31,7 @@
             <h4>Rate Per Night: </h4>
             <asp:Label runat="server" ID="LBLCostPerNight"></asp:Label>
             <br />
-            <asp:Button runat="server" ID="BTNReservation"  Text="Make Reservation" />
+            <asp:Button runat="server" ID="BTNReservation"  Text="Make Reservation" OnClick="BTNReservation_Click" />
         </div>
        
 

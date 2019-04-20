@@ -12,6 +12,7 @@ namespace HAFH
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
+
         protected void Page_Load(object sender, EventArgs e)
         {
             LoadPropertyInfo();
@@ -19,8 +20,8 @@ namespace HAFH
 
         protected void LoadPropertyInfo()
         {
-            string PropertyID = Request.QueryString["PropertyId"];            
             //string StateValue;
+            string PropertyID = Request.QueryString["PropertyId"];
 
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ToString());
             con.Open();
@@ -39,9 +40,9 @@ namespace HAFH
             while (myReader.Read())
             {
                 LBLPropName.Text = myReader["PropertyName"].ToString().Trim();
-                LBLPropAddress.Text = myReader["PropertyAddress"].ToString().Trim();
-                LBLPropCity.Text = myReader["PropertyCity"].ToString().Trim();
-                LBLPropState.Text = myReader["PropertyState"].ToString().Trim();
+                LBLPropAddress.Text = myReader["PropertyAddress" ].ToString().Trim() + ",";
+                LBLPropCity.Text = myReader["PropertyCity" ].ToString().Trim() + ",";
+                LBLPropState.Text = myReader["PropertyState" ].ToString().Trim() + ",";
                 LBLPropZipcode.Text = myReader["PropertyZipcode"].ToString().Trim();
                 LBLPropDescr.Text = myReader["PropertyDesc"].ToString().Trim();
                 LBLNumBedrooms.Text = myReader["NumberOfBedrooms"].ToString().Trim();
@@ -49,6 +50,12 @@ namespace HAFH
                 LBLCostPerNight.Text = myReader["CostPerNight"].ToString().Trim();
             }
             con.Close();
+        }
+
+        protected void BTNReservation_Click(object sender, EventArgs e)
+        {
+            string PropertyID = Request.QueryString["PropertyId"];
+            Response.Redirect("Reservations.aspx?PropertyId=" + PropertyID);
         }
     }
 }
