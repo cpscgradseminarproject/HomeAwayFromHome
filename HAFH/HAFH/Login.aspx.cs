@@ -220,5 +220,64 @@ namespace HAFH
                 HttpContext.Current.Response.Redirect("~/Bounce/LoginBounce.aspx");
             }
         }
+
+        public void AdminLoginCheck()
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                string CurrentUser = User.Identity.GetUserId();
+                int CurrentUserRole;
+
+                string conn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+                SqlConnection con = new SqlConnection(conn);
+                con.Open();
+                string strSelect = "Select RoleID From AspNetUserRoles where UserID = @CurrentUser";
+                SqlCommand cmd = new SqlCommand(strSelect, con);
+
+                cmd.Parameters.AddWithValue("@CurrentUser", CurrentUser);
+
+                SqlDataReader myReader = cmd.ExecuteReader();
+
+                myReader.Close();
+                CurrentUserRole = Convert.ToInt16(cmd.ExecuteScalar());
+
+                con.Close();
+
+                if (CurrentUserRole == 0001)
+                {
+                    //they are a customer only and not authorized to view this page.
+                    HttpContext.Current.Response.Redirect("~/Bounce/NotAuthorizedBounce.aspx");
+                }
+
+                if (CurrentUserRole == 0002)
+                {
+                    //They are a property manager so don't let them in.
+                    HttpContext.Current.Response.Redirect("~/Bounce/NotAuthorizedBounce.aspx");
+                }
+
+                if (CurrentUserRole == 0003)
+                {
+                    //They are an admin so do nothing.
+                    
+                }
+
+                if (CurrentUserRole == 0004)
+                {
+                    //They are the site owner so show them the things...
+
+                }
+
+                if (CurrentUserRole == 0005)
+                {
+                    //They are banned show them the door
+                    HttpContext.Current.Response.Redirect("~/Bounce/BannedBounce.aspx");
+                }
+            }
+
+            if (User.Identity.IsAuthenticated == false)
+            {
+                HttpContext.Current.Response.Redirect("~/Bounce/LoginBounce.aspx");
+            }
+        }
     }
 }

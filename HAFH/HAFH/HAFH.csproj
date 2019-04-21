@@ -195,7 +195,6 @@
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="PossiblyCutPages\ViewDisputes.aspx" />
     <Content Include="PossiblyCutPages\ViewDisputesAgainstYou.aspx" />
-    <Content Include="ViewProperty.aspx" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
     <Content Include="Scripts\WebForms\Focus.js" />
     <Content Include="Scripts\WebForms\GridView.js" />
@@ -409,13 +408,6 @@
       <DependentUpon>ViewDisputesAgainstYou.aspx</DependentUpon>
     </Compile>
     <Compile Include="SystemClasses\LoginManager.cs" />
-    <Compile Include="ViewProperty.aspx.cs">
-      <DependentUpon>ViewProperty.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ViewProperty.aspx.designer.cs">
-      <DependentUpon>ViewProperty.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

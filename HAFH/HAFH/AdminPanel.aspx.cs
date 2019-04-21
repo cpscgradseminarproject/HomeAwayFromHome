@@ -14,43 +14,10 @@ namespace HAFH
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string CurrentUser = User.Identity.GetUserId();
-            int CurrentUserRole;
-
-            if (User.Identity.IsAuthenticated)
-            {
-
-                string conn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-                SqlConnection con = new SqlConnection(conn);
-                con.Open();
-                string strSelect = "Select RoleID From AspNetUserRoles where UserID = @CurrentUser";
-                SqlCommand cmd = new SqlCommand(strSelect, con);
-
-                cmd.Parameters.AddWithValue("@CurrentUser", CurrentUser);
-
-                SqlDataReader myReader = cmd.ExecuteReader();
-
-                myReader.Close();
-                CurrentUserRole = Convert.ToInt16(cmd.ExecuteScalar());
-
-                con.Close();
-
-                if (CurrentUserRole == 0003)
-                {
-                    PNLAdmin.Visible = true;
-                }
-
-                else
-                {
-                    Response.Redirect("Login.aspx");
-                }
-            }
-
-            else
-            {
-                Response.Redirect("Login.aspx");
-            }
-
+            Login AdminManager = new Login();
+            AdminManager.AdminLoginCheck();
+            PNLAdmin.Visible = true;
+            
         }
 
         protected void BTNLogout_Click(object sender, EventArgs e)
