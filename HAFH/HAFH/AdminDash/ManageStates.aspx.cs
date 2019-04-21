@@ -14,7 +14,8 @@ namespace HAFH.AdminDash
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Login AdminManager = new Login();
+            AdminManager.AdminLoginCheck();
         }
 
         protected void BTNAddState_Click(object sender, EventArgs e)

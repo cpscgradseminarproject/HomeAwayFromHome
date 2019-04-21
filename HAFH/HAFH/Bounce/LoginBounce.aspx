@@ -1,15 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LoginBounce.aspx.cs" Inherits="HAFH.Bounce.LoginBounce" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="LoginBounce.aspx.cs" Inherits="HAFH.Bounce.LoginBounce" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
         <div>
+            <h1>Please login to view this page</h1>
+
+            <p>This page requires users to be logged into an account to access, please login or register</p>
         </div>
-    </form>
-</body>
-</html>
+</asp:Content>

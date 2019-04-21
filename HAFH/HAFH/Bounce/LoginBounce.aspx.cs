@@ -11,7 +11,7 @@ namespace HAFH.Bounce
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            HttpContext.Current.Response.AddHeader("REFRESH", "5;URL=../Login.aspx");
         }
     }
 }

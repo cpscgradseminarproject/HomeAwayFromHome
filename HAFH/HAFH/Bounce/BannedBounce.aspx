@@ -1,15 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="BannedBounce.aspx.cs" Inherits="HAFH.Bounce.BannedBounce" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="BannedBounce.aspx.cs" Inherits="HAFH.Bounce.BannedBounce" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
         <div>
+            <h1>You have been banned from the platfrom</h1>
+            <p>You have been banned from using the HAFH platform. If you wish to appeal this ban please contact customer support.</p>
         </div>
-    </form>
-</body>
-</html>
+</asp:Content>
