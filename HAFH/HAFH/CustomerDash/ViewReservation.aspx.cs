@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,6 +14,10 @@ namespace HAFH
         {
             Login PageCheck = new Login();
             PageCheck.BasicLoginCheck();
+
+            string UserID = Convert.ToString(User.Identity.GetUserId());
+            LBLUserID.Text = UserID;
+
         }
     }
 }

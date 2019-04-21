@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Microsoft.AspNet.Identity;
+
 
 namespace HAFH
 {
@@ -13,6 +15,9 @@ namespace HAFH
         {
             Login PropertyManagerCheck = new Login();
             PropertyManagerCheck.PropertyManagerRoleCheck();
+
+            String PropertyOwner = User.Identity.GetUserId();
+            LBLPropertyOwner.Text = PropertyOwner;
         }
     }
 }

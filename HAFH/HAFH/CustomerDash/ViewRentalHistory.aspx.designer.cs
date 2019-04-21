@@ -13,6 +13,15 @@ namespace HAFH {
     public partial class ViewRentalHistory {
         
         /// <summary>
+        /// LBLUserID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LBLUserID;
+        
+        /// <summary>
         /// RentalHistoryGvw control.
         /// </summary>
         /// <remarks>
@@ -20,5 +29,14 @@ namespace HAFH {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView RentalHistoryGvw;
+        
+        /// <summary>
+        /// RentalHistoryDB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource RentalHistoryDB;
     }
 }

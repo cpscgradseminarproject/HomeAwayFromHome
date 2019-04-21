@@ -110,7 +110,7 @@ namespace HAFH
 
         private void OpenWindow()
         {
-            Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('A Reservation for these dates already exists');</script>");
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('A reservation for these dates already exists.');</script>");
         }
 
         protected void ConflictCheck()
