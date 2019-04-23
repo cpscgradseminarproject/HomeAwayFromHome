@@ -52,8 +52,8 @@ namespace HAFH
                 command.Parameters.Add("@PropertyDesc", SqlDbType.VarChar).Value = PropertyDesc;
                 command.Parameters.Add("@CostPerNight", SqlDbType.Int).Value = CostPerNight;
                 command.Parameters.Add("@PropertyOwner", SqlDbType.NVarChar).Value = UserID;
-                command.Parameters.Add("@Is_Active", SqlDbType.Bit).Value = true;
-                command.Parameters.Add("@Is_Approved", SqlDbType.Bit).Value = true;
+                command.Parameters.Add("@Is_Active", SqlDbType.Bit).Value = false;
+                command.Parameters.Add("@Is_Approved", SqlDbType.Bit).Value = false;
 
 
 

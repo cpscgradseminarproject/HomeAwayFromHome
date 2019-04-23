@@ -2,7 +2,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h1>View Renter History</h1>
-    <asp:Label ID ="LBLPropertyOwner" runat="server"></asp:Label>
+    <asp:Label ID ="LBLPropertyOwner" runat="server" Visible="False"></asp:Label>
 
     <br />
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="RentalID" DataSourceID="PropertyOwnerHistoryDB">

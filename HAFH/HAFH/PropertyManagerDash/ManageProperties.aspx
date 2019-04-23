@@ -9,13 +9,13 @@
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="PropertyID" DataSourceID="SqlDataSource1">
         <Columns>
             <asp:CommandField ShowEditButton="True" />
-            <asp:BoundField DataField="PropertyID" HeaderText="PropertyID" InsertVisible="False" ReadOnly="True" SortExpression="PropertyID" />
+            <asp:BoundField DataField="PropertyID" HeaderText="PropertyID" InsertVisible="False" ReadOnly="True" SortExpression="PropertyID" Visible="False" />
             <asp:BoundField DataField="PropertyName" HeaderText="PropertyName" SortExpression="PropertyName" />
-            <asp:BoundField DataField="PropertyOwner" HeaderText="PropertyOwner" SortExpression="PropertyOwner" />
-            <asp:BoundField DataField="PropertyAddress" HeaderText="PropertyAddress" SortExpression="PropertyAddress" />
-            <asp:BoundField DataField="PropertyCity" HeaderText="PropertyCity" SortExpression="PropertyCity" />
-            <asp:BoundField DataField="PropertyState" HeaderText="PropertyState" SortExpression="PropertyState" />
-            <asp:BoundField DataField="PropertyZipcode" HeaderText="PropertyZipcode" SortExpression="PropertyZipcode" />
+            <asp:BoundField DataField="PropertyOwner" HeaderText="PropertyOwner" SortExpression="PropertyOwner" ReadOnly="True" Visible="False" />
+            <asp:BoundField DataField="PropertyAddress" HeaderText="PropertyAddress" SortExpression="PropertyAddress" ReadOnly="True" />
+            <asp:BoundField DataField="PropertyCity" HeaderText="PropertyCity" SortExpression="PropertyCity" ReadOnly="True" />
+            <asp:BoundField DataField="PropertyState" HeaderText="PropertyState" SortExpression="PropertyState" ReadOnly="True" />
+            <asp:BoundField DataField="PropertyZipcode" HeaderText="PropertyZipcode" SortExpression="PropertyZipcode" ReadOnly="True" />
             <asp:BoundField DataField="NumberOfBedrooms" HeaderText="NumberOfBedrooms" SortExpression="NumberOfBedrooms" />
             <asp:BoundField DataField="NumberOfBathrooms" HeaderText="NumberOfBathrooms" SortExpression="NumberOfBathrooms" />
             <asp:CheckBoxField DataField="IsHandycapAccessible" HeaderText="IsHandycapAccessible" SortExpression="IsHandycapAccessible" />
@@ -23,7 +23,7 @@
             <asp:BoundField DataField="PropertyDesc" HeaderText="PropertyDesc" SortExpression="PropertyDesc" />
             <asp:BoundField DataField="CostPerNight" HeaderText="CostPerNight" SortExpression="CostPerNight" />
             <asp:CheckBoxField DataField="Is_Active" HeaderText="Is_Active" SortExpression="Is_Active" />
-            <asp:CheckBoxField DataField="Is_Approved" HeaderText="Is_Approved" SortExpression="Is_Approved" />
+            <asp:CheckBoxField DataField="Is_Approved" HeaderText="Is_Approved" SortExpression="Is_Approved" ReadOnly="True" />
         </Columns>
     </asp:GridView>
 

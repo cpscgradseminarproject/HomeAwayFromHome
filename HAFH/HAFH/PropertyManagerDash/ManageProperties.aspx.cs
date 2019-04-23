@@ -17,7 +17,7 @@ namespace HAFH
 
         protected void BTNAddProperty_Click(object sender, EventArgs e)
         {
-            Response.Redirect("AddNewProperty.aspx");
+            Response.Redirect("~/PropertyManagerDash/AddNewProperty.aspx");
         }
     }
 }

@@ -13,30 +13,21 @@ namespace HAFH.AdminDash {
     public partial class ManageUsers {
         
         /// <summary>
-        /// GVManageUsers control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GVManageUsers;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
-        /// HAFHDB control.
+        /// UserDB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource HAFHDB;
-        
-        /// <summary>
-        /// UserRoleData control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource UserRoleData;
+        protected global::System.Web.UI.WebControls.SqlDataSource UserDB;
     }
 }

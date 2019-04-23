@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddNewProperty.aspx.cs" Inherits="HAFH.AddNewProperty" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:Panel ID="PanelProperty" runat="server" Visible="false">
+    <asp:Panel ID="PanelProperty" runat="server">
     
     <div>
             <h1>Add New Property</h1>
