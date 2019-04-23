@@ -13,5 +13,12 @@ namespace HAFH
         {
 
         }
+
+        protected void SearchSubmit_Click(object sender, EventArgs e)
+        {
+            String Search = SearchInput.Text;
+            String Type = DDLFilter.SelectedValue;
+            Response.Redirect("SearchResults.aspx?Search=" + Search + "&Type=" + Type);
+        }
     }
 }
