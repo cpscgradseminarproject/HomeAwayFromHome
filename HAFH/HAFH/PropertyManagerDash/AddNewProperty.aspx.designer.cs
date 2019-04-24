@@ -31,6 +31,15 @@ namespace HAFH {
         protected global::System.Web.UI.WebControls.TextBox PropNameTxt;
         
         /// <summary>
+        /// VALIDPropertyName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator VALIDPropertyName;
+        
+        /// <summary>
         /// PropDescTxt control.
         /// </summary>
         /// <remarks>
@@ -38,6 +47,15 @@ namespace HAFH {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox PropDescTxt;
+        
+        /// <summary>
+        /// VALIDDesc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator VALIDDesc;
         
         /// <summary>
         /// AddrTxt control.
@@ -49,22 +67,13 @@ namespace HAFH {
         protected global::System.Web.UI.WebControls.TextBox AddrTxt;
         
         /// <summary>
-        /// CityDDL control.
+        /// VALIDAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList CityDDL;
-        
-        /// <summary>
-        /// SqlDataSource2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator VALIDAddress;
         
         /// <summary>
         /// StDDL control.
@@ -85,6 +94,24 @@ namespace HAFH {
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
         
         /// <summary>
+        /// CityDDL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList CityDDL;
+        
+        /// <summary>
+        /// SqlDataSource2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
+        
+        /// <summary>
         /// ZipTxt control.
         /// </summary>
         /// <remarks>
@@ -92,6 +119,15 @@ namespace HAFH {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox ZipTxt;
+        
+        /// <summary>
+        /// VALIDZipcode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator VALIDZipcode;
         
         /// <summary>
         /// BedroomDDL control.
@@ -146,6 +182,15 @@ namespace HAFH {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox PriceTxt;
+        
+        /// <summary>
+        /// VALIDCost control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator VALIDCost;
         
         /// <summary>
         /// SubmitProp control.

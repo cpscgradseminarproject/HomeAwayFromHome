@@ -13,7 +13,7 @@
             <asp:BoundField DataField="UserName" HeaderText="UserName" ReadOnly="True" SortExpression="UserName" />
             <asp:TemplateField HeaderText="RoleId" SortExpression="RoleId">
                 <EditItemTemplate>
-                    <asp:DropDownList ID="DropDownList1" runat="server" SelectedValue='<%# Bind("RoleId") %>'>
+                    <asp:DropDownList ID="DropDownList1" runat="server" SelectedValue='<%# Bind("RoleId") %>' CssClass="form-control">
                         <asp:ListItem Value="0001">Customer</asp:ListItem>
                         <asp:ListItem Value="0002">Property Manager</asp:ListItem>
                         <asp:ListItem Value="0003">Admin</asp:ListItem>

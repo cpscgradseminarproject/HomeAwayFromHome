@@ -76,6 +76,7 @@ namespace HAFH
         protected void CalCheckin_SelectionChanged(object sender, EventArgs e)
         {
             LBLCheckin.Text = CalCheckin.SelectedDate.ToShortDateString();
+            CalCheckout.Visible = true;
         }
 
         protected void MakeReservation()
@@ -114,6 +115,11 @@ namespace HAFH
             Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('A reservation for these dates already exists.');</script>");
         }
 
+        private void DateCheck()
+        {
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('Your checkout date cannot be before your checkin date, please make sure your selection is correct.');</script>");
+        }
+
         protected void ConflictCheck()
         {
             string PropertyID = Request.QueryString["PropertyId"];
@@ -142,7 +148,14 @@ namespace HAFH
 
             if(myReader.HasRows == false)
             {
-                MakeReservation();
+                if (Convert.ToDecimal(LBLTotalCost.Text) <= 0)
+                {
+                    DateCheck();
+                }
+                else
+                {
+                    MakeReservation();
+                }
             }
             con.Close();
         }

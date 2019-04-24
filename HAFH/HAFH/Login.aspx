@@ -14,25 +14,25 @@
             <div style="margin-bottom: 10px">
                <asp:Label runat="server" AssociatedControlID="UserName">User name</asp:Label>
                <div>
-                  <asp:TextBox runat="server" ID="UserName" />
+                  <asp:TextBox runat="server" ID="UserName" CssClass="form-control" Width="400" />
                </div>
             </div>
             <div style="margin-bottom: 10px">
                <asp:Label runat="server" AssociatedControlID="Password">Password</asp:Label>
                <div>
-                  <asp:TextBox runat="server" ID="Password" TextMode="Password" />
+                  <asp:TextBox runat="server" ID="Password" TextMode="Password" CssClass="form-control" Width="400" />
                </div>
             </div>
             <div style="margin-bottom: 10px">
                <div>
-                  <asp:Button runat="server" OnClick="SignIn" Text="Log in" />
+                  <asp:Button runat="server" OnClick="SignIn" Text="Log in" CssClass="btn btn-default" />
                </div>
             </div>
          </asp:PlaceHolder>
          <asp:PlaceHolder runat="server" ID="LogoutButton" Visible="false">
             <div>
                <div>
-                  <asp:Button runat="server" OnClick="SignOut" Text="Log out" />
+                  <asp:Button runat="server" OnClick="SignOut" Text="Log out" CssClass="btn btn-default" />
                </div>
             </div>
          </asp:PlaceHolder>

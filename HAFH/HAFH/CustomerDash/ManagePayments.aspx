@@ -63,7 +63,7 @@
                 </asp:RequiredFieldValidator>
     <br />
     <asp:Label ID="LBLCardNumber" runat="server" Text="Card Number:" Width="150px"></asp:Label>
-    <asp:TextBox ID="TXTCardNumber" runat="server" Width="400px" CssClass="form-control"></asp:TextBox>
+    <asp:TextBox ID="TXTCardNumber" runat="server" Width="400px" CssClass="form-control" TextMode="Number"></asp:TextBox>
                 <asp:RequiredFieldValidator
                     ID="VALIDCardNumber"
                     Runat="server"
@@ -77,7 +77,7 @@
     <asp:Calendar ID="CALExp" runat="server"></asp:Calendar>
     <br />
     <asp:Label ID="LBLSecurityCode" runat="server" Text="Security Code:" Width="150px"></asp:Label>
-    <asp:TextBox ID="TXTSecurityCode" runat="server" Width="400px" CssClass="form-control"></asp:TextBox>
+    <asp:TextBox ID="TXTSecurityCode" runat="server" Width="400px" CssClass="form-control" TextMode="Number"></asp:TextBox>
                 <asp:RequiredFieldValidator
                     ID="VALIDSecurityCode"
                     Runat="server"

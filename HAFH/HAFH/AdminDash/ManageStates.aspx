@@ -18,8 +18,16 @@
     </asp:SqlDataSource>
 
 
-    <asp:Label ID="LBLAddState" runat="server" Text="Add a New State:"></asp:Label>
-    <asp:TextBox ID="TXTAddState" runat="server"></asp:TextBox>
+    <asp:Label ID="LBLAddState" runat="server" Text="Add a New State:" Width="150px"></asp:Label>
+    <asp:TextBox ID="TXTAddState" runat="server" CssClass="form-control" Width="400px"></asp:TextBox>
+                <asp:RequiredFieldValidator
+                    ID="VALIDCardNumber"
+                    Runat="server"
+                    ControlToValidate="TXTAddState"
+                    Display="Dynamic"
+                    ErrorMessage="*Please provide a state"
+                    ForeColor="red">
+                </asp:RequiredFieldValidator>
     <br />
     <asp:Button ID="BTNAddState" runat="server" Text="Add" OnClick="BTNAddState_Click" />
 </asp:Content>

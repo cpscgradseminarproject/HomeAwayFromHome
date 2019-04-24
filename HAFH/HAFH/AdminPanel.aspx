@@ -6,19 +6,19 @@
     
     <asp:Panel runat="server" ID="PNLAdmin" Visible="False">
 
-        <asp:Button ID="BTNManageCity" runat="server" Text="Manage Permitted States" OnClick="BTNManageState_Click" />
+        <asp:Button ID="BTNManageCity" runat="server" Text="Manage Permitted States" OnClick="BTNManageState_Click" CssClass="btn btn-default" />
         <br />
         <br />
-        <asp:Button ID="BTNManageState" runat="server" Text="Manage Permitted Cities" OnClick="BTNManageCity_Click" />
+        <asp:Button ID="BTNManageState" runat="server" Text="Manage Permitted Cities" OnClick="BTNManageCity_Click" CssClass="btn btn-default" />
         <br />
         <br />
-        <asp:Button ID="BTNManageUsers" runat="server" Text="Manage Users" OnClick="BTNManageUsers_Click" />
+        <asp:Button ID="BTNManageUsers" runat="server" Text="Manage Users" OnClick="BTNManageUsers_Click" CssClass="btn btn-default" />
         <br />
         <br />
-        <asp:Button ID="BTNViewPropertySubmissions" runat="server" Text="View New Property Submissions" OnClick="BTNViewPropertySubmissions_Click" />
+        <asp:Button ID="BTNViewPropertySubmissions" runat="server" Text="View New Property Submissions" OnClick="BTNViewPropertySubmissions_Click" CssClass="btn btn-default" />
         <br />
         <br />
-        <asp:Button ID="BTNLogout" runat="server" Text="Logout" OnClick="BTNLogout_Click" />
+        <asp:Button ID="BTNLogout" runat="server" Text="Logout" OnClick="BTNLogout_Click" CssClass="btn btn-default" />
 
     </asp:Panel>
 </asp:Content>

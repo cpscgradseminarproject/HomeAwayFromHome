@@ -30,10 +30,11 @@
     <div class="col-md-6">
         <div class="HAFHCal">
             <asp:Label runat="server">Check Out:</asp:Label>
-            <asp:Calendar runat="server" ID="CalCheckout" OnSelectionChanged="CheckOut_SelectionChanged">
+            <asp:Calendar runat="server" ID="CalCheckout" OnSelectionChanged="CheckOut_SelectionChanged" Visible="False">
             </asp:Calendar>
         </div>
     </div>
+    <br clear="both" />
     <br />
     <br />
         <asp:Label ID="LBLPaymentMethod" runat="server" Text="Please Select a payment method to be used:"></asp:Label>
@@ -61,7 +62,7 @@
         <asp:Label ID="LBLTotalCost" runat="server"></asp:Label>
     <br />
     <div>
-        <asp:Button ID="BTNReserve" runat="server" Text="Book Now" OnClick="BTNReserve_Click" />
+        <asp:Button ID="BTNReserve" runat="server" Text="Book Now" OnClick="BTNReserve_Click" CssClass="btn btn-default" />
     </div>
     <asp:Label ID="LBLUserID" runat="server" Text="Label" Visible="false"></asp:Label>
 

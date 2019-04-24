@@ -49,6 +49,15 @@ namespace HAFH.AdminDash {
         protected global::System.Web.UI.WebControls.TextBox TXTAddCity;
         
         /// <summary>
+        /// VALIDCity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator VALIDCity;
+        
+        /// <summary>
         /// LBLStates control.
         /// </summary>
         /// <remarks>

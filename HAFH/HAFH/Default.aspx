@@ -31,7 +31,7 @@
                         <br />
                         <asp:Label ID="PropertyIDLabel" Visible="false"  runat="server" Text='<%# Eval("PropertyID") %>' />
                         <br />
-                        <asp:Button ID="ViewListing" Text="View Full Listing" CommandArgument='<%# Eval("PropertyID") %>' runat="server" />                        
+                        <asp:Button ID="ViewListing" Text="View Full Listing" CommandArgument='<%# Eval("PropertyID") %>' runat="server" CssClass="btn btn-default" />                        
                         <br />
                     </td>
                 </tr>

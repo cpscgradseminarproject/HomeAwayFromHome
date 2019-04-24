@@ -31,7 +31,7 @@
             <h4>Rate Per Night: </h4>
             <asp:Label runat="server" ID="LBLCostPerNight"></asp:Label>
             <br />
-            <asp:Button runat="server" ID="BTNReservation"  Text="Make Reservation" OnClick="BTNReservation_Click" />
+            <asp:Button runat="server" ID="BTNReservation"  Text="Make Reservation" OnClick="BTNReservation_Click" CssClass="btn btn-default" />
         </div>
        
 

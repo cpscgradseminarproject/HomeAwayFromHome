@@ -8,7 +8,9 @@
 
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="PropertyID" DataSourceID="SqlDataSource1">
         <Columns>
-            <asp:CommandField ShowEditButton="True" />
+            <asp:CommandField ShowEditButton="True" ButtonType="Button" >
+            <ControlStyle CssClass="btn btn-default" />
+            </asp:CommandField>
             <asp:BoundField DataField="PropertyID" HeaderText="PropertyID" InsertVisible="False" ReadOnly="True" SortExpression="PropertyID" Visible="False" />
             <asp:BoundField DataField="PropertyName" HeaderText="PropertyName" SortExpression="PropertyName" />
             <asp:BoundField DataField="PropertyOwner" HeaderText="PropertyOwner" SortExpression="PropertyOwner" ReadOnly="True" Visible="False" />
@@ -94,7 +96,7 @@
         </UpdateParameters>
     </asp:SqlDataSource>
 
-    <asp:Button ID="BTNAddProperty" runat="server" Text="Add New Property" OnClick="BTNAddProperty_Click" />
+    <asp:Button ID="BTNAddProperty" runat="server" Text="Add New Property" OnClick="BTNAddProperty_Click" CssClass="btn btn-default" />
 
 </asp:Content>
 
