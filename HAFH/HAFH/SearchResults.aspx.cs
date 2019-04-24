@@ -14,44 +14,13 @@ namespace HAFH
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            SelectSearch();
-        }
-                
-        protected void SelectSearch()
-        {
             String Search = Request.QueryString["Search"];
-            string Type = Request.QueryString["Type"];
-            int Selection = Convert.ToInt32(Type);
+            LBLSearchTerm.Text = Search;
+        }
 
-
-            if (Selection == 1)
-            {
-                string CS = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-                using (SqlConnection con = new SqlConnection(CS))
-                {
-                    SqlCommand LoadDetails = new SqlCommand("MainSearch", con);
-                    LoadDetails.CommandType = CommandType.StoredProcedure;
-                    LoadDetails.Parameters.Add("@SearchInput", SqlDbType.VarChar).Value = Search;
-                    con.Open();
-                    DataList1.DataSource = LoadDetails.ExecuteReader();
-                    DataList1.DataBind();
-                }
-            }
-            else
-            {
-                int Zipcode = Convert.ToInt32(Search);
-
-                string CS = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-                using (SqlConnection con = new SqlConnection(CS))
-                {
-                    SqlCommand LoadDetails = new SqlCommand("ZipSearch", con);
-                    LoadDetails.CommandType = CommandType.StoredProcedure;
-                    LoadDetails.Parameters.Add("@Zip", SqlDbType.VarChar).Value = Zipcode;
-                    con.Open();
-                    DataList1.DataSource = LoadDetails.ExecuteReader();
-                    DataList1.DataBind();
-                };
-            }
+        protected void DataList1_ItemCommand(object source, DataListCommandEventArgs e)
+        {
+            Response.Redirect("Listing.aspx?PropertyId=" + e.CommandArgument.ToString());
         }
     }
 }

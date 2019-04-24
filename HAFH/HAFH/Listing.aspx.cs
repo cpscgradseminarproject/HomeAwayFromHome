@@ -21,7 +21,7 @@ namespace HAFH
         protected void LoadPropertyInfo()
         {
             //string StateValue;
-            string PropertyID = Request.QueryString["PropertyId"];
+            string Property = Request.QueryString["PropertyId"];
 
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ToString());
             con.Open();
@@ -29,6 +29,7 @@ namespace HAFH
             //out SQL code will execute as the stored procedure SelectUsersSelfEdit
             SqlCommand ViewListing = new SqlCommand("ViewFullListing", con) { CommandType = CommandType.StoredProcedure };
 
+            int PropertyID = Convert.ToInt32(Property);
             //sets up the same variables as the query
             ViewListing.Parameters.Add("@PropertyID", SqlDbType.Int).Value = PropertyID;
 

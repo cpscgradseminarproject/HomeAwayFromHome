@@ -31,6 +31,15 @@ namespace HAFH {
         protected global::System.Web.UI.WebControls.Label LBLType;
         
         /// <summary>
+        /// LBLPropID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LBLPropID;
+        
+        /// <summary>
         /// DataList1 control.
         /// </summary>
         /// <remarks>
@@ -38,5 +47,14 @@ namespace HAFH {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DataList DataList1;
+        
+        /// <summary>
+        /// MainSearchDB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource MainSearchDB;
     }
 }
