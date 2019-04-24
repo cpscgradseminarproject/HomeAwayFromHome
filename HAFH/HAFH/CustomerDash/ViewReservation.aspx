@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ViewReservation.aspx.cs" Inherits="HAFH.ViewReservation" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-     <h2 style="font-size: medium">Reservations</h2>
+     <h1>Reservations</h1>
     <asp:Label ID="LBLUserID" runat="server" Visible="false"></asp:Label>
      <br />
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="RentalID" DataSourceID="ReservationDB">

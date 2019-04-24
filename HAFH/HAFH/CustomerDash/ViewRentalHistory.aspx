@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ViewRentalHistory.aspx.cs" Inherits="HAFH.ViewRentalHistory" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <h2 style="font-size: medium">Rental History</h2>
-    <asp:Label ID="LBLUserID" runat="server"></asp:Label>
+    <h1>Rental History</h1>
+    <asp:Label ID="LBLUserID" runat="server" Visible="False"></asp:Label>
     <asp:GridView runat="server" ID="RentalHistoryGvw" AutoGenerateColumns="False" DataKeyNames="RentalID" DataSourceID="RentalHistoryDB">
         <Columns>
             <asp:BoundField DataField="RentalID" HeaderText="RentalID" InsertVisible="False" ReadOnly="True" SortExpression="RentalID" />

@@ -17,6 +17,12 @@ namespace HAFH
     {
         string CurrentUser;
 
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            // allows validation with minimal effort.
+            UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
+        }
+
         protected void CreateUser_Click(object sender, EventArgs e)
         {
             // Default UserStore constructor uses the default connection string named: DefaultConnection

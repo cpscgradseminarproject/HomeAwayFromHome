@@ -31,6 +31,15 @@ namespace HAFH {
         protected global::System.Web.UI.WebControls.TextBox UserName;
         
         /// <summary>
+        /// VALIDUserName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator VALIDUserName;
+        
+        /// <summary>
         /// LBLFirstName control.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace HAFH {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TXTFirstName;
+        
+        /// <summary>
+        /// VALIDFirstName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator VALIDFirstName;
         
         /// <summary>
         /// LBLLastName control.
@@ -67,6 +85,15 @@ namespace HAFH {
         protected global::System.Web.UI.WebControls.TextBox TXTLastName;
         
         /// <summary>
+        /// VALIDLastName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator VALIDLastName;
+        
+        /// <summary>
         /// LBLEmail control.
         /// </summary>
         /// <remarks>
@@ -83,6 +110,15 @@ namespace HAFH {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TXTEmail;
+        
+        /// <summary>
+        /// VALIDEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator VALIDEmail;
         
         /// <summary>
         /// LBLPhoneNumber control.
@@ -103,6 +139,15 @@ namespace HAFH {
         protected global::System.Web.UI.WebControls.TextBox TXTPhoneNumber;
         
         /// <summary>
+        /// VALIDPhoneNumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator VALIDPhoneNumber;
+        
+        /// <summary>
         /// LBLBirthDate control.
         /// </summary>
         /// <remarks>
@@ -121,6 +166,15 @@ namespace HAFH {
         protected global::System.Web.UI.WebControls.TextBox TXTBday;
         
         /// <summary>
+        /// VALIDBday control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator VALIDBday;
+        
+        /// <summary>
         /// Password control.
         /// </summary>
         /// <remarks>
@@ -130,6 +184,15 @@ namespace HAFH {
         protected global::System.Web.UI.WebControls.TextBox Password;
         
         /// <summary>
+        /// ValiPass1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValiPass1;
+        
+        /// <summary>
         /// ConfirmPassword control.
         /// </summary>
         /// <remarks>
@@ -137,5 +200,14 @@ namespace HAFH {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox ConfirmPassword;
+        
+        /// <summary>
+        /// VALIDPass2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator VALIDPass2;
     }
 }

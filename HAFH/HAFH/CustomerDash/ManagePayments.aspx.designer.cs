@@ -49,6 +49,15 @@ namespace HAFH {
         protected global::System.Web.UI.WebControls.TextBox TXTPaymentName;
         
         /// <summary>
+        /// VALIDPaymentName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator VALIDPaymentName;
+        
+        /// <summary>
         /// LBLNameOnCard control.
         /// </summary>
         /// <remarks>
@@ -67,6 +76,15 @@ namespace HAFH {
         protected global::System.Web.UI.WebControls.TextBox TXTNameOnCard;
         
         /// <summary>
+        /// VALIDNameOnCard control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator VALIDNameOnCard;
+        
+        /// <summary>
         /// LBLCardNumber control.
         /// </summary>
         /// <remarks>
@@ -83,6 +101,15 @@ namespace HAFH {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TXTCardNumber;
+        
+        /// <summary>
+        /// VALIDCardNumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator VALIDCardNumber;
         
         /// <summary>
         /// LBLExpDate control.
@@ -119,6 +146,15 @@ namespace HAFH {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TXTSecurityCode;
+        
+        /// <summary>
+        /// VALIDSecurityCode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator VALIDSecurityCode;
         
         /// <summary>
         /// LBLCardType control.

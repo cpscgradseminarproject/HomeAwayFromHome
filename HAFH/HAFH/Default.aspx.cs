@@ -16,7 +16,7 @@ namespace HAFH
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            LoginChange();
         }
 
         protected void BTNCreatAccount_Click(object sender, EventArgs e)
@@ -32,6 +32,20 @@ namespace HAFH
         protected void DataList_ItemCommand(object source, DataListCommandEventArgs e)
         {
             Response.Redirect("Listing.aspx?PropertyId=" + e.CommandArgument.ToString());
+        }
+
+        protected void LoginChange()
+        {
+            if (User.Identity.IsAuthenticated == true)
+            {
+                BTNCreatAccount.Visible = false;
+                BTNLogin.Text = "User Dashboard";
+            }
+            else
+            {
+                BTNCreatAccount.Visible = true;
+                BTNLogin.Text = "Login";
+            }
         }
     }
 }
