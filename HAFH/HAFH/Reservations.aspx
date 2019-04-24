@@ -36,6 +36,15 @@
     </div>
     <br />
     <br />
+        <asp:Label ID="LBLPaymentMethod" runat="server" Text="Please Select a payment method to be used:"></asp:Label>
+        <asp:DropDownList ID="DDLPaymentMethod" runat="server" DataSourceID="PaymentMethodDB" DataTextField="PaymentName" DataValueField="PaymentID"></asp:DropDownList>
+        <asp:SqlDataSource ID="PaymentMethodDB" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [PaymentID], [PaymentName] FROM [PaymentOptions] WHERE ([UserID] = @UserID)">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="LBLUserID" Name="UserID" PropertyName="Text" Type="String" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+    <br />
+    <br />
         Check In: 
         <asp:Label ID="LBLCheckin" runat="server"></asp:Label>
         <br />
@@ -50,12 +59,11 @@
         <br />
         Total Cost: 
         <asp:Label ID="LBLTotalCost" runat="server"></asp:Label>
-
     <br />
     <div>
         <asp:Button ID="BTNReserve" runat="server" Text="Book Now" OnClick="BTNReserve_Click" />
     </div>
-        <asp:CheckBox ID ="ReservationCheck" Checked="true" runat="server" />
+    <asp:Label ID="LBLUserID" runat="server" Text="Label" Visible="false"></asp:Label>
 
     <br />
 </div>

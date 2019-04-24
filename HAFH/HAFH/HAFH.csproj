@@ -148,6 +148,7 @@
     <Content Include="Bounce\BannedBounce.aspx" />
     <Content Include="Bounce\LoginBounce.aspx" />
     <Content Include="Bounce\NotAuthorizedBounce.aspx" />
+    <Content Include="Bounce\ReservationSuccessBounce.aspx" />
     <Content Include="Bounce\SuccessBounce.aspx" />
     <Content Include="DefaultDataListTest.aspx" />
     <Content Include="PropertyManagerDash\AccountBalance.aspx" />
@@ -247,6 +248,13 @@
     </Compile>
     <Compile Include="Bounce\NotAuthorizedBounce.aspx.designer.cs">
       <DependentUpon>NotAuthorizedBounce.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bounce\ReservationSuccessBounce.aspx.cs">
+      <DependentUpon>ReservationSuccessBounce.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bounce\ReservationSuccessBounce.aspx.designer.cs">
+      <DependentUpon>ReservationSuccessBounce.aspx</DependentUpon>
     </Compile>
     <Compile Include="Bounce\SuccessBounce.aspx.cs">
       <DependentUpon>SuccessBounce.aspx</DependentUpon>

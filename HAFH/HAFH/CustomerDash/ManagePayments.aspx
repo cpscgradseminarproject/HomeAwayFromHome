@@ -40,6 +40,9 @@
 
     <br />
     <br />
+    <asp:Label ID="LBLPaymentName" runat="server" Text="Payment Name" Width="150px"></asp:Label>
+    <asp:TextBox ID="TXTPaymentName" runat="server" Width="300px"></asp:TextBox>
+    <br />
     <asp:Label ID="LBLNameOnCard" runat="server" Text="Name On Card:" Width="150px"></asp:Label>
     <asp:TextBox ID="TXTNameOnCard" runat="server" Width="300px"></asp:TextBox>
     <br />

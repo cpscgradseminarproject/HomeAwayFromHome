@@ -20,11 +20,17 @@ namespace HAFH
 
         protected void Page_PreRender(object sender, EventArgs e)
         {
+            Login UserCheck = new Login();
+            UserCheck.BasicLoginCheck();
+
             LoadPropertyInfo();
+            
         }
 
         protected void LoadPropertyInfo()
         {
+            LBLUserID.Text = User.Identity.GetUserId();
+
             //string StateValue;
             string PropertyID = Request.QueryString["PropertyId"];
 
@@ -72,15 +78,6 @@ namespace HAFH
             LBLCheckin.Text = CalCheckin.SelectedDate.ToShortDateString();
         }
 
-
-
-
-
-
-
-
-
-
         protected void MakeReservation()
         {
             string PropertyId = Request.QueryString["PropertyId"];
@@ -100,12 +97,16 @@ namespace HAFH
                 command.Parameters.Add("@Checkin", SqlDbType.DateTime).Value = Checkin;
                 command.Parameters.Add("@Checkout", SqlDbType.DateTime).Value = Checkout;
                 command.Parameters.Add("@RentalTotalCost", SqlDbType.Money).Value = RentalTotalCost;
+                command.Parameters.Add("@PaymentMethod", SqlDbType.Int).Value = DDLPaymentMethod.SelectedValue;
 
                 con.Open();
                 command.ExecuteNonQuery();
                 con.Close();
                 System.Diagnostics.Debug.WriteLine(" make reservation connection has run and closed");
             }
+
+            //Move to confirmation Page
+            Response.Redirect("~/Bounce/ReservationSuccessBounce.aspx");
         }
 
         private void OpenWindow()

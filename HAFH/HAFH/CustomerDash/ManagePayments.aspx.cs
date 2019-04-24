@@ -33,14 +33,12 @@ namespace HAFH
             string SecurityCode = TXTSecurityCode.Text;
             DateTime CardExp = CALExp.SelectedDate;
 
-
-
             string UserID = Convert.ToString(User.Identity.GetUserId());
-
 
             using (var conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ToString()))
             using (var command = new SqlCommand("AddCard", conn) { CommandType = CommandType.StoredProcedure })
             {
+                command.Parameters.Add("@PaymentName", SqlDbType.NVarChar).Value = TXTPaymentName.Text;
                 command.Parameters.Add("@CurrentUser", SqlDbType.NVarChar).Value = CurrentUser;
                 command.Parameters.Add("@NameOnCard", SqlDbType.VarChar).Value = NameOnCard;
                 command.Parameters.Add("@CardNumber", SqlDbType.VarChar).Value = CardNumber;
@@ -48,12 +46,12 @@ namespace HAFH
                 command.Parameters.Add("@SecurityCode", SqlDbType.VarChar).Value = SecurityCode;
                 command.Parameters.Add("@ExpDate", SqlDbType.Date).Value = CardExp;
 
-
-
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
             }
+
+            Response.Redirect("~/CustomerDash/ManagePayments.aspx");
         }
     }
 }

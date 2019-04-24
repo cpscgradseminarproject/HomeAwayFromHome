@@ -1,1 +1,18 @@
-Hey Tyrone!
+
+Features not yet implimented:
+1.) Property Image Listings
+2.) Money management systems
+3.)Property Manager banning
+
+
+Known Issues:
+1.)UserInfo.aspx will update the password as a blank field if nothing is inserted into the text box.
+
+2.)NewUserRegistration.aspx needs to take in additional info as well as create a user role entry for the user.
+
+3.)Reservations.aspx needs to be able to take in payment info and add a relation to payment method into the RentalHistory table.
+
+4.)ViewPMApplication does not allow the user role of a user to be set to property manager when a property is accepted. 
+
+5.)All input fields need to have validation applied.
+

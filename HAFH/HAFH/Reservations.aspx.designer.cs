@@ -94,6 +94,33 @@ namespace HAFH {
         protected global::System.Web.UI.WebControls.Calendar CalCheckout;
         
         /// <summary>
+        /// LBLPaymentMethod control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LBLPaymentMethod;
+        
+        /// <summary>
+        /// DDLPaymentMethod control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DDLPaymentMethod;
+        
+        /// <summary>
+        /// PaymentMethodDB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource PaymentMethodDB;
+        
+        /// <summary>
         /// LBLCheckin control.
         /// </summary>
         /// <remarks>
@@ -139,12 +166,12 @@ namespace HAFH {
         protected global::System.Web.UI.WebControls.Button BTNReserve;
         
         /// <summary>
-        /// ReservationCheck control.
+        /// LBLUserID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox ReservationCheck;
+        protected global::System.Web.UI.WebControls.Label LBLUserID;
     }
 }
