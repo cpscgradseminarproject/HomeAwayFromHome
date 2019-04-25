@@ -121,13 +121,22 @@ namespace HAFH {
         protected global::System.Web.UI.WebControls.Label LBLExpDate;
         
         /// <summary>
-        /// CALExp control.
+        /// TXTExpday control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar CALExp;
+        protected global::System.Web.UI.WebControls.TextBox TXTExpday;
+        
+        /// <summary>
+        /// VALIDEXpday control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator VALIDEXpday;
         
         /// <summary>
         /// LBLSecurityCode control.

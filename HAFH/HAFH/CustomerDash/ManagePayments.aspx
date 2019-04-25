@@ -74,7 +74,15 @@
                 </asp:RequiredFieldValidator>
     <br />
     <asp:Label ID="LBLExpDate" runat="server" Text="Expiration Date:" Width="150px"></asp:Label>
-    <asp:Calendar ID="CALExp" runat="server"></asp:Calendar>
+    <asp:TextBox ID="TXTExpday" runat="server" TextMode="Date" CssClass="form-control" Width="400px"></asp:TextBox>
+                <asp:RequiredFieldValidator
+                    ID="VALIDEXpday"
+                    Runat="server"
+                    ControlToValidate="TXTExpDay"
+                    Display="Dynamic"
+                    ErrorMessage="*Expiration date is a required field"
+                    ForeColor="red">
+                </asp:RequiredFieldValidator>
     <br />
     <asp:Label ID="LBLSecurityCode" runat="server" Text="Security Code:" Width="150px"></asp:Label>
     <asp:TextBox ID="TXTSecurityCode" runat="server" Width="400px" CssClass="form-control" TextMode="Number"></asp:TextBox>

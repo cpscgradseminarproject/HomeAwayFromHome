@@ -31,7 +31,7 @@ namespace HAFH
             string CardNumber = TXTCardNumber.Text;
             string CardType = DDLCardType.SelectedValue.ToString();
             string SecurityCode = TXTSecurityCode.Text;
-            DateTime CardExp = CALExp.SelectedDate;
+            DateTime CardExp = Convert.ToDateTime(TXTExpday.Text);
 
             string UserID = Convert.ToString(User.Identity.GetUserId());
 
